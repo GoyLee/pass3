@@ -9,7 +9,7 @@
     "path": "/",
     "regexp": "/^(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\passport2\\app\\controller\\home.js#HomeController.root()"
+      "E:\\JS\\pass3\\app\\controller\\home.js#HomeController.root()"
     ]
   },
   {
@@ -22,7 +22,7 @@
     "path": "/home",
     "regexp": "/^\\/home(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\passport2\\app\\controller\\home.js#HomeController.render()"
+      "E:\\JS\\pass3\\app\\controller\\home.js#HomeController.render()"
     ]
   },
   {
@@ -47,7 +47,7 @@
     "path": "/login",
     "regexp": "/^\\/login(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\passport2\\app\\controller\\home.js#HomeController.login()"
+      "E:\\JS\\pass3\\app\\controller\\home.js#HomeController.login()"
     ]
   },
   {
@@ -60,7 +60,7 @@
     "path": "/currentUser",
     "regexp": "/^\\/currentUser(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\passport2\\app\\controller\\home.js#HomeController.currentuser()"
+      "E:\\JS\\pass3\\app\\controller\\home.js#HomeController.currentuser()"
     ]
   },
   {
@@ -73,7 +73,7 @@
     "path": "/logout",
     "regexp": "/^\\/logout(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\passport2\\app\\controller\\home.js#HomeController.logout()"
+      "E:\\JS\\pass3\\app\\controller\\home.js#HomeController.logout()"
     ]
   },
   {
@@ -86,7 +86,7 @@
     "path": "/rule",
     "regexp": "/^\\/rule(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\passport2\\app\\controller\\user.js#UserController.getuser()"
+      "E:\\JS\\pass3\\app\\controller\\user.js#UserController.getuser()"
     ]
   },
   {
@@ -98,7 +98,7 @@
     "path": "/rule",
     "regexp": "/^\\/rule(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\passport2\\app\\controller\\user.js#UserController.adduser()"
+      "E:\\JS\\pass3\\app\\controller\\user.js#UserController.postuser()"
     ]
   }
 ]

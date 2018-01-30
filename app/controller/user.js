@@ -16,7 +16,7 @@ class UserController extends Controller {
     if (ctx.isAuthenticated()) {
       try{
         //var product = await ProductCol.find({_id: id}) // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise！
-        const User = await ctx.model.User.find({}); //从数据库中找出user
+        const User = await ctx.model.User.find({}).sort('-updatedAt'); //从数据库中找出user
         //console.log(User);
         const result = {
           list: User,
@@ -40,17 +40,36 @@ class UserController extends Controller {
     };
   }
 
-  async adduser() {
+  async postuser() {
     const ctx = this.ctx;
     //TODO: 提供异常和错误处理
     if (ctx.isAuthenticated()) {
       try{
         var user = ctx.request.body;
-        //user = {...user, creatAt: Date.now() };
-        console.log('To add: ' + JSON.stringify(user));
-        const newUser = await new ctx.model.User(user).save(); //function (err) { if (err) return console.error(err); });
-
-        const Users = await ctx.model.User.find({}); //从数据库中找出user
+        //{method} = user;
+        switch (user.method) {
+          case 'post':
+            //user = {...user, createdAt: Date.now() };
+            console.log('To add: ' + JSON.stringify(user));
+            const newUser = await new ctx.model.User(user).save(); //function (err) { if (err) return console.error(err); }
+            break;
+          case 'delete':
+            //console.log('To delete: ' + JSON.stringify(user).id);
+            var ids = user.id.split(",");
+            console.log('To delete: ' + ids);
+            //var ObjectID = ctx.app.mongoose.Schema.Types.ObjectId;
+            //var id = new ObjectID;
+            var ids = user.id.split(",");
+            //ids.map( id => ctx.model.User.remove({_id: id})); //err => { if (err) return console.log(err); })); 
+            //findByIdAndRemove() executes immediately if callback is passed, else a Query object is returned!!
+            //ids.map( id => ctx.model.User.findByIdAndRemove(id, err => { if (err) return console.log(err); })); 
+            // async pro(id) { await ctx.model.User.findByIdAndRemove(id);}
+            ids.map( async (id) => await ctx.model.User.findByIdAndRemove(id) ); // 注意map，async 和 await的配合！
+            break;
+          default:
+            break;
+        };
+        const Users = await ctx.model.User.find({}).sort('-updatedAt'); //从数据库中找出user
         //console.log(User);
         const result = {
           list: Users,

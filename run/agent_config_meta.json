@@ -1,241 +1,241 @@
 {
   "passportWeibo": {
-    "key": "E:\\JS\\passport2\\config\\config.default.js",
-    "secret": "E:\\JS\\passport2\\config\\config.default.js"
+    "key": "E:\\JS\\pass3\\config\\config.default.js",
+    "secret": "E:\\JS\\pass3\\config\\config.default.js"
   },
   "passportGithub": {
-    "key": "E:\\JS\\passport2\\config\\config.default.js",
-    "secret": "E:\\JS\\passport2\\config\\config.default.js"
+    "key": "E:\\JS\\pass3\\config\\config.default.js",
+    "secret": "E:\\JS\\pass3\\config\\config.default.js"
   },
   "passportBitbucket": {
-    "key": "E:\\JS\\passport2\\config\\config.default.js",
-    "secret": "E:\\JS\\passport2\\config\\config.default.js"
+    "key": "E:\\JS\\pass3\\config\\config.default.js",
+    "secret": "E:\\JS\\pass3\\config\\config.default.js"
   },
   "passportTwitter": {
-    "key": "E:\\JS\\passport2\\config\\config.default.js",
-    "secret": "E:\\JS\\passport2\\config\\config.default.js"
+    "key": "E:\\JS\\pass3\\config\\config.default.js",
+    "secret": "E:\\JS\\pass3\\config\\config.default.js"
   },
-  "keys": "E:\\JS\\passport2\\config\\config.default.js",
+  "keys": "E:\\JS\\pass3\\config\\config.default.js",
   "security": {
-    "csrf": "E:\\JS\\passport2\\config\\config.default.js",
-    "ctoken": "E:\\JS\\passport2\\config\\config.default.js",
-    "domainWhiteList": "E:\\JS\\passport2\\node_modules\\egg-security\\config\\config.default.js",
-    "protocolWhiteList": "E:\\JS\\passport2\\node_modules\\egg-security\\config\\config.default.js",
-    "defaultMiddleware": "E:\\JS\\passport2\\node_modules\\egg-security\\config\\config.default.js",
+    "csrf": "E:\\JS\\pass3\\config\\config.default.js",
+    "ctoken": "E:\\JS\\pass3\\config\\config.default.js",
+    "domainWhiteList": "E:\\JS\\pass3\\node_modules\\egg-security\\config\\config.default.js",
+    "protocolWhiteList": "E:\\JS\\pass3\\node_modules\\egg-security\\config\\config.default.js",
+    "defaultMiddleware": "E:\\JS\\pass3\\node_modules\\egg-security\\config\\config.default.js",
     "xframe": {
-      "enable": "E:\\JS\\passport2\\node_modules\\egg-security\\config\\config.default.js",
-      "value": "E:\\JS\\passport2\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "E:\\JS\\pass3\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "E:\\JS\\pass3\\node_modules\\egg-security\\config\\config.default.js"
     },
     "hsts": {
-      "enable": "E:\\JS\\passport2\\node_modules\\egg-security\\config\\config.local.js",
-      "maxAge": "E:\\JS\\passport2\\node_modules\\egg-security\\config\\config.default.js",
-      "includeSubdomains": "E:\\JS\\passport2\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "E:\\JS\\pass3\\node_modules\\egg-security\\config\\config.local.js",
+      "maxAge": "E:\\JS\\pass3\\node_modules\\egg-security\\config\\config.default.js",
+      "includeSubdomains": "E:\\JS\\pass3\\node_modules\\egg-security\\config\\config.default.js"
     },
     "dta": {
-      "enable": "E:\\JS\\passport2\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "E:\\JS\\pass3\\node_modules\\egg-security\\config\\config.default.js"
     },
     "methodnoallow": {
-      "enable": "E:\\JS\\passport2\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "E:\\JS\\pass3\\node_modules\\egg-security\\config\\config.default.js"
     },
     "noopen": {
-      "enable": "E:\\JS\\passport2\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "E:\\JS\\pass3\\node_modules\\egg-security\\config\\config.default.js"
     },
     "nosniff": {
-      "enable": "E:\\JS\\passport2\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "E:\\JS\\pass3\\node_modules\\egg-security\\config\\config.default.js"
     },
     "xssProtection": {
-      "enable": "E:\\JS\\passport2\\node_modules\\egg-security\\config\\config.default.js",
-      "value": "E:\\JS\\passport2\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "E:\\JS\\pass3\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "E:\\JS\\pass3\\node_modules\\egg-security\\config\\config.default.js"
     },
     "csp": {
-      "enable": "E:\\JS\\passport2\\node_modules\\egg-security\\config\\config.default.js",
-      "policy": "E:\\JS\\passport2\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "E:\\JS\\pass3\\node_modules\\egg-security\\config\\config.default.js",
+      "policy": "E:\\JS\\pass3\\node_modules\\egg-security\\config\\config.default.js"
     }
   },
-  "middleware": "E:\\JS\\passport2\\config\\config.default.js",
+  "middleware": "E:\\JS\\pass3\\config\\config.default.js",
   "mongoose": {
-    "url": "E:\\JS\\passport2\\config\\config.default.js",
-    "options": "E:\\JS\\passport2\\config\\config.default.js"
+    "url": "E:\\JS\\pass3\\config\\config.default.js",
+    "options": "E:\\JS\\pass3\\config\\config.default.js"
   },
   "session": {
-    "maxAge": "E:\\JS\\passport2\\node_modules\\egg-session\\config\\config.default.js",
-    "key": "E:\\JS\\passport2\\node_modules\\egg-session\\config\\config.default.js",
-    "httpOnly": "E:\\JS\\passport2\\node_modules\\egg-session\\config\\config.default.js",
-    "encrypt": "E:\\JS\\passport2\\node_modules\\egg-session\\config\\config.default.js"
+    "maxAge": "E:\\JS\\pass3\\node_modules\\egg-session\\config\\config.default.js",
+    "key": "E:\\JS\\pass3\\node_modules\\egg-session\\config\\config.default.js",
+    "httpOnly": "E:\\JS\\pass3\\node_modules\\egg-session\\config\\config.default.js",
+    "encrypt": "E:\\JS\\pass3\\node_modules\\egg-session\\config\\config.default.js"
   },
   "helper": {
-    "shtml": "E:\\JS\\passport2\\node_modules\\egg-security\\config\\config.default.js"
+    "shtml": "E:\\JS\\pass3\\node_modules\\egg-security\\config\\config.default.js"
   },
   "jsonp": {
-    "limit": "E:\\JS\\passport2\\node_modules\\egg-jsonp\\config\\config.default.js",
-    "callback": "E:\\JS\\passport2\\node_modules\\egg-jsonp\\config\\config.default.js",
-    "csrf": "E:\\JS\\passport2\\node_modules\\egg-jsonp\\config\\config.default.js"
+    "limit": "E:\\JS\\pass3\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "callback": "E:\\JS\\pass3\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "csrf": "E:\\JS\\pass3\\node_modules\\egg-jsonp\\config\\config.default.js"
   },
   "onerror": {
-    "errorPageUrl": "E:\\JS\\passport2\\node_modules\\egg-onerror\\config\\config.default.js",
-    "appErrorFilter": "E:\\JS\\passport2\\node_modules\\egg-onerror\\config\\config.default.js"
+    "errorPageUrl": "E:\\JS\\pass3\\node_modules\\egg-onerror\\config\\config.default.js",
+    "appErrorFilter": "E:\\JS\\pass3\\node_modules\\egg-onerror\\config\\config.default.js"
   },
   "i18n": {
-    "defaultLocale": "E:\\JS\\passport2\\node_modules\\egg-i18n\\config\\config.default.js",
-    "dirs": "E:\\JS\\passport2\\node_modules\\egg-i18n\\config\\config.default.js",
-    "queryField": "E:\\JS\\passport2\\node_modules\\egg-i18n\\config\\config.default.js",
-    "cookieField": "E:\\JS\\passport2\\node_modules\\egg-i18n\\config\\config.default.js",
-    "cookieMaxAge": "E:\\JS\\passport2\\node_modules\\egg-i18n\\config\\config.default.js"
+    "defaultLocale": "E:\\JS\\pass3\\node_modules\\egg-i18n\\config\\config.default.js",
+    "dirs": "E:\\JS\\pass3\\node_modules\\egg-i18n\\config\\config.default.js",
+    "queryField": "E:\\JS\\pass3\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieField": "E:\\JS\\pass3\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieMaxAge": "E:\\JS\\pass3\\node_modules\\egg-i18n\\config\\config.default.js"
   },
   "watcher": {
-    "type": "E:\\JS\\passport2\\node_modules\\egg-watcher\\config\\config.local.js",
+    "type": "E:\\JS\\pass3\\node_modules\\egg-watcher\\config\\config.local.js",
     "eventSources": {
-      "default": "E:\\JS\\passport2\\node_modules\\egg-watcher\\config\\config.default.js",
-      "development": "E:\\JS\\passport2\\node_modules\\egg-watcher\\config\\config.default.js"
+      "default": "E:\\JS\\pass3\\node_modules\\egg-watcher\\config\\config.default.js",
+      "development": "E:\\JS\\pass3\\node_modules\\egg-watcher\\config\\config.default.js"
     }
   },
   "multipart": {
-    "autoFields": "E:\\JS\\passport2\\node_modules\\egg-multipart\\config\\config.default.js",
-    "defaultCharset": "E:\\JS\\passport2\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fieldNameSize": "E:\\JS\\passport2\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fieldSize": "E:\\JS\\passport2\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fields": "E:\\JS\\passport2\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fileSize": "E:\\JS\\passport2\\node_modules\\egg-multipart\\config\\config.default.js",
-    "files": "E:\\JS\\passport2\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fileExtensions": "E:\\JS\\passport2\\node_modules\\egg-multipart\\config\\config.default.js",
-    "whitelist": "E:\\JS\\passport2\\node_modules\\egg-multipart\\config\\config.default.js"
+    "autoFields": "E:\\JS\\pass3\\node_modules\\egg-multipart\\config\\config.default.js",
+    "defaultCharset": "E:\\JS\\pass3\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldNameSize": "E:\\JS\\pass3\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldSize": "E:\\JS\\pass3\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fields": "E:\\JS\\pass3\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileSize": "E:\\JS\\pass3\\node_modules\\egg-multipart\\config\\config.default.js",
+    "files": "E:\\JS\\pass3\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileExtensions": "E:\\JS\\pass3\\node_modules\\egg-multipart\\config\\config.default.js",
+    "whitelist": "E:\\JS\\pass3\\node_modules\\egg-multipart\\config\\config.default.js"
   },
   "development": {
-    "watchDirs": "E:\\JS\\passport2\\node_modules\\egg-development\\config\\config.default.js",
-    "ignoreDirs": "E:\\JS\\passport2\\node_modules\\egg-development\\config\\config.default.js",
-    "fastReady": "E:\\JS\\passport2\\node_modules\\egg-development\\config\\config.default.js",
-    "reloadOnDebug": "E:\\JS\\passport2\\node_modules\\egg-development\\config\\config.default.js"
+    "watchDirs": "E:\\JS\\pass3\\node_modules\\egg-development\\config\\config.default.js",
+    "ignoreDirs": "E:\\JS\\pass3\\node_modules\\egg-development\\config\\config.default.js",
+    "fastReady": "E:\\JS\\pass3\\node_modules\\egg-development\\config\\config.default.js",
+    "reloadOnDebug": "E:\\JS\\pass3\\node_modules\\egg-development\\config\\config.default.js"
   },
   "logrotator": {
-    "filesRotateByHour": "E:\\JS\\passport2\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "hourDelimiter": "E:\\JS\\passport2\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "filesRotateBySize": "E:\\JS\\passport2\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "maxFileSize": "E:\\JS\\passport2\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "maxFiles": "E:\\JS\\passport2\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "rotateDuration": "E:\\JS\\passport2\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "maxDays": "E:\\JS\\passport2\\node_modules\\egg-logrotator\\config\\config.default.js"
+    "filesRotateByHour": "E:\\JS\\pass3\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "hourDelimiter": "E:\\JS\\pass3\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "filesRotateBySize": "E:\\JS\\pass3\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFileSize": "E:\\JS\\pass3\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFiles": "E:\\JS\\pass3\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "rotateDuration": "E:\\JS\\pass3\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxDays": "E:\\JS\\pass3\\node_modules\\egg-logrotator\\config\\config.default.js"
   },
   "static": {
-    "prefix": "E:\\JS\\passport2\\node_modules\\egg-static\\config\\config.default.js",
-    "dir": "E:\\JS\\passport2\\node_modules\\egg-static\\config\\config.default.js",
-    "dynamic": "E:\\JS\\passport2\\node_modules\\egg-static\\config\\config.default.js",
-    "preload": "E:\\JS\\passport2\\node_modules\\egg-static\\config\\config.default.js",
-    "buffer": "E:\\JS\\passport2\\node_modules\\egg-static\\config\\config.default.js",
-    "maxFiles": "E:\\JS\\passport2\\node_modules\\egg-static\\config\\config.default.js"
+    "prefix": "E:\\JS\\pass3\\node_modules\\egg-static\\config\\config.default.js",
+    "dir": "E:\\JS\\pass3\\node_modules\\egg-static\\config\\config.default.js",
+    "dynamic": "E:\\JS\\pass3\\node_modules\\egg-static\\config\\config.default.js",
+    "preload": "E:\\JS\\pass3\\node_modules\\egg-static\\config\\config.default.js",
+    "buffer": "E:\\JS\\pass3\\node_modules\\egg-static\\config\\config.default.js",
+    "maxFiles": "E:\\JS\\pass3\\node_modules\\egg-static\\config\\config.default.js"
   },
   "view": {
-    "root": "E:\\JS\\passport2\\node_modules\\egg-view\\config\\config.default.js",
-    "cache": "E:\\JS\\passport2\\node_modules\\egg-view\\config\\config.local.js",
-    "defaultExtension": "E:\\JS\\passport2\\node_modules\\egg-view\\config\\config.default.js",
-    "defaultViewEngine": "E:\\JS\\passport2\\node_modules\\egg-view\\config\\config.default.js",
-    "mapping": "E:\\JS\\passport2\\node_modules\\egg-view\\config\\config.default.js"
+    "root": "E:\\JS\\pass3\\node_modules\\egg-view\\config\\config.default.js",
+    "cache": "E:\\JS\\pass3\\node_modules\\egg-view\\config\\config.local.js",
+    "defaultExtension": "E:\\JS\\pass3\\node_modules\\egg-view\\config\\config.default.js",
+    "defaultViewEngine": "E:\\JS\\pass3\\node_modules\\egg-view\\config\\config.default.js",
+    "mapping": "E:\\JS\\pass3\\node_modules\\egg-view\\config\\config.default.js"
   },
-  "env": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-  "name": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-  "proxy": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-  "protocolHeaders": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-  "ipHeaders": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-  "hostHeaders": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
+  "env": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+  "name": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+  "proxy": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+  "protocolHeaders": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+  "ipHeaders": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+  "hostHeaders": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
   "pkg": {
-    "name": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
+    "name": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
     "dependencies": {
-      "egg": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-      "egg-mongoose": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-      "egg-passport": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-      "egg-passport-bitbucket": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-      "egg-passport-github": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-      "egg-passport-twitter": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-      "egg-passport-weibo": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-      "passport-local": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js"
+      "egg": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+      "egg-mongoose": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+      "egg-passport": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+      "egg-passport-bitbucket": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+      "egg-passport-github": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+      "egg-passport-twitter": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+      "egg-passport-weibo": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+      "passport-local": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js"
     },
     "devDependencies": {
-      "egg-bin": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js"
+      "egg-bin": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js"
     },
     "scripts": {
-      "dev": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-      "cov": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js"
+      "dev": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+      "cov": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js"
     },
-    "private": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js"
+    "private": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js"
   },
-  "baseDir": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-  "HOME": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-  "rundir": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
+  "baseDir": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+  "HOME": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+  "rundir": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
   "dump": {
-    "ignore": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js"
+    "ignore": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js"
   },
   "confusedConfigurations": {
-    "bodyparser": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "notFound": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "sitefile": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "middlewares": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "httpClient": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js"
+    "bodyparser": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "notFound": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "sitefile": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "middlewares": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "httpClient": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js"
   },
   "notfound": {
-    "pageUrl": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js"
+    "pageUrl": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js"
   },
   "siteFile": {
-    "/favicon.ico": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js"
+    "/favicon.ico": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js"
   },
   "bodyParser": {
-    "enable": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "encoding": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "formLimit": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "jsonLimit": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "strict": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
+    "enable": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "formLimit": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "jsonLimit": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "strict": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
     "queryString": {
-      "arrayLimit": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-      "depth": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-      "parameterLimit": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js"
+      "arrayLimit": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+      "depth": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+      "parameterLimit": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js"
     }
   },
   "logger": {
-    "dir": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "encoding": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "env": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "level": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "consoleLevel": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "disableConsoleAfterReady": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "outputJSON": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "buffer": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "appLogName": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "coreLogName": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "agentLogName": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "errorLogName": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
+    "dir": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "env": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "level": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "consoleLevel": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "disableConsoleAfterReady": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "outputJSON": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "buffer": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "appLogName": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "coreLogName": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "agentLogName": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "errorLogName": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
     "coreLogger": {
-      "consoleLevel": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.local.js"
+      "consoleLevel": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.local.js"
     },
-    "allowDebugAtProd": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js"
+    "allowDebugAtProd": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js"
   },
   "httpclient": {
-    "enableDNSCache": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "dnsCacheMaxLength": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-    "dnsCacheMaxAge": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
+    "enableDNSCache": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheMaxLength": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheMaxAge": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
     "request": {
-      "timeout": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js"
+      "timeout": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js"
     },
     "httpAgent": {
-      "keepAlive": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-      "freeSocketKeepAliveTimeout": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-      "maxSockets": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-      "maxFreeSockets": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js"
+      "keepAlive": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketKeepAliveTimeout": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js"
     },
     "httpsAgent": {
-      "keepAlive": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-      "freeSocketKeepAliveTimeout": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-      "maxSockets": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-      "maxFreeSockets": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js"
+      "keepAlive": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketKeepAliveTimeout": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js"
     }
   },
-  "coreMiddleware": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-  "workerStartTimeout": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
+  "coreMiddleware": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+  "workerStartTimeout": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
   "cluster": {
     "listen": {
-      "path": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-      "port": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js",
-      "hostname": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js"
+      "path": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+      "port": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js",
+      "hostname": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js"
     }
   },
   "clusterClient": {
-    "responseTimeout": "E:\\JS\\passport2\\node_modules\\egg\\config\\config.default.js"
+    "responseTimeout": "E:\\JS\\pass3\\node_modules\\egg\\config\\config.default.js"
   }
 }

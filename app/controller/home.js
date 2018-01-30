@@ -74,6 +74,7 @@ class HomeController extends Controller {
   }
 
   
+  
   async render() {
     const ctx = this.ctx;
 //ctx.user.id

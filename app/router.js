@@ -24,7 +24,7 @@ module.exports = app => {
 
   //对rule的请求，返回user
   app.router.get('/rule', controller.user.getuser);
-  app.router.post('/rule', controller.user.adduser);
+  app.router.post('/rule', controller.user.postuser);
 
   /*
   app.router.get('/logout', ctx => {
