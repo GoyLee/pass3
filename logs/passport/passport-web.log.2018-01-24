@@ -1,0 +1,342 @@
+2018-01-21 08:12:04,740 WARN 8460 [-/::1/-/14ms POST /login] nodejs.AuthenticationError: Bad Request
+    at allFailed (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at Strategy.authenticate (D:\JS\passport\node_modules\passport-local\lib\strategy.js:75:17)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:348:16)
+    at authenticate (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:349:7)
+    at Promise (D:\JS\passport\node_modules\egg-passport\lib\framework.js:83:7)
+    at new Promise (<anonymous>)
+    at Object.passportAuthenticate (D:\JS\passport\node_modules\egg-passport\lib\framework.js:77:15)
+    at passportAuthenticate.next (<anonymous>)
+    at Object.dispatch (D:\JS\passport\node_modules\koa-router\lib\router.js:334:5)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (D:\JS\passport\node_modules\co\index.js:65:19)
+    at D:\JS\passport\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (D:\JS\passport\node_modules\co\index.js:50:10)
+name: 'AuthenticationError'
+message: 'Bad Request'
+status: 400
+pid: 8460
+hostname: ghm-pc
+
+2018-01-21 08:17:53,054 WARN 5364 [-/::1/-/127ms POST /login] nodejs.AuthenticationError: Unauthorized
+    at allFailed (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at verified (D:\JS\passport\node_modules\passport-local\lib\strategy.js:82:30)
+    at D:\JS\passport\node_modules\egg-passport\lib\passport.js:76:7
+    at Generator.next (<anonymous>)
+    at onFulfilled (D:\JS\passport\node_modules\co\index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+name: 'AuthenticationError'
+message: 'Unauthorized'
+status: 401
+pid: 5364
+hostname: ghm-pc
+
+2018-01-21 08:18:10,436 WARN 5364 [-/::1/-/5ms POST /login] nodejs.AuthenticationError: Bad Request
+    at allFailed (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at Strategy.authenticate (D:\JS\passport\node_modules\passport-local\lib\strategy.js:75:17)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:348:16)
+    at authenticate (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:349:7)
+    at Promise (D:\JS\passport\node_modules\egg-passport\lib\framework.js:83:7)
+    at new Promise (<anonymous>)
+    at Object.passportAuthenticate (D:\JS\passport\node_modules\egg-passport\lib\framework.js:77:15)
+    at passportAuthenticate.next (<anonymous>)
+    at Object.dispatch (D:\JS\passport\node_modules\koa-router\lib\router.js:334:5)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (D:\JS\passport\node_modules\co\index.js:65:19)
+    at D:\JS\passport\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (D:\JS\passport\node_modules\co\index.js:50:10)
+name: 'AuthenticationError'
+message: 'Bad Request'
+status: 400
+pid: 5364
+hostname: ghm-pc
+
+2018-01-21 08:19:25,314 WARN 5364 [-/::1/-/1ms POST /login] nodejs.AuthenticationError: Bad Request
+    at allFailed (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at Strategy.authenticate (D:\JS\passport\node_modules\passport-local\lib\strategy.js:75:17)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:348:16)
+    at authenticate (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:349:7)
+    at Promise (D:\JS\passport\node_modules\egg-passport\lib\framework.js:83:7)
+    at new Promise (<anonymous>)
+    at Object.passportAuthenticate (D:\JS\passport\node_modules\egg-passport\lib\framework.js:77:15)
+    at passportAuthenticate.next (<anonymous>)
+    at Object.dispatch (D:\JS\passport\node_modules\koa-router\lib\router.js:334:5)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (D:\JS\passport\node_modules\co\index.js:65:19)
+    at D:\JS\passport\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (D:\JS\passport\node_modules\co\index.js:50:10)
+name: 'AuthenticationError'
+message: 'Bad Request'
+status: 400
+pid: 5364
+hostname: ghm-pc
+
+2018-01-21 08:20:41,800 WARN 10704 [-/::1/-/39ms POST /login] nodejs.AuthenticationError: Bad Request
+    at allFailed (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at Strategy.authenticate (D:\JS\passport\node_modules\passport-local\lib\strategy.js:75:17)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:348:16)
+    at authenticate (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:349:7)
+    at Promise (D:\JS\passport\node_modules\egg-passport\lib\framework.js:83:7)
+    at new Promise (<anonymous>)
+    at Object.passportAuthenticate (D:\JS\passport\node_modules\egg-passport\lib\framework.js:77:15)
+    at passportAuthenticate.next (<anonymous>)
+    at Object.dispatch (D:\JS\passport\node_modules\koa-router\lib\router.js:334:5)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (D:\JS\passport\node_modules\co\index.js:65:19)
+    at D:\JS\passport\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (D:\JS\passport\node_modules\co\index.js:50:10)
+name: 'AuthenticationError'
+message: 'Bad Request'
+status: 400
+pid: 10704
+hostname: ghm-pc
+
+2018-01-21 08:26:34,781 WARN 10704 [-/::1/-/4ms POST /login] nodejs.AuthenticationError: Bad Request
+    at allFailed (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at Strategy.authenticate (D:\JS\passport\node_modules\passport-local\lib\strategy.js:75:17)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:348:16)
+    at authenticate (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:349:7)
+    at Promise (D:\JS\passport\node_modules\egg-passport\lib\framework.js:83:7)
+    at new Promise (<anonymous>)
+    at Object.passportAuthenticate (D:\JS\passport\node_modules\egg-passport\lib\framework.js:77:15)
+    at passportAuthenticate.next (<anonymous>)
+    at Object.dispatch (D:\JS\passport\node_modules\koa-router\lib\router.js:334:5)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (D:\JS\passport\node_modules\co\index.js:65:19)
+    at D:\JS\passport\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (D:\JS\passport\node_modules\co\index.js:50:10)
+name: 'AuthenticationError'
+message: 'Bad Request'
+status: 400
+pid: 10704
+hostname: ghm-pc
+
+2018-01-21 08:34:00,310 WARN 10704 [-/::1/-/2ms POST /login] nodejs.AuthenticationError: Bad Request
+    at allFailed (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at Strategy.authenticate (D:\JS\passport\node_modules\passport-local\lib\strategy.js:75:17)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:348:16)
+    at authenticate (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:349:7)
+    at Promise (D:\JS\passport\node_modules\egg-passport\lib\framework.js:83:7)
+    at new Promise (<anonymous>)
+    at Object.passportAuthenticate (D:\JS\passport\node_modules\egg-passport\lib\framework.js:77:15)
+    at passportAuthenticate.next (<anonymous>)
+    at Object.dispatch (D:\JS\passport\node_modules\koa-router\lib\router.js:334:5)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (D:\JS\passport\node_modules\co\index.js:65:19)
+    at D:\JS\passport\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (D:\JS\passport\node_modules\co\index.js:50:10)
+name: 'AuthenticationError'
+message: 'Bad Request'
+status: 400
+pid: 10704
+hostname: ghm-pc
+
+2018-01-21 08:40:18,567 WARN 3208 [-/::1/-/41ms POST /login] nodejs.AuthenticationError: Bad Request
+    at allFailed (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at Strategy.authenticate (D:\JS\passport\node_modules\passport-local\lib\strategy.js:75:17)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:348:16)
+    at authenticate (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:349:7)
+    at Promise (D:\JS\passport\node_modules\egg-passport\lib\framework.js:83:7)
+    at new Promise (<anonymous>)
+    at Object.passportAuthenticate (D:\JS\passport\node_modules\egg-passport\lib\framework.js:77:15)
+    at passportAuthenticate.next (<anonymous>)
+    at Object.dispatch (D:\JS\passport\node_modules\koa-router\lib\router.js:334:5)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (D:\JS\passport\node_modules\co\index.js:65:19)
+    at D:\JS\passport\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (D:\JS\passport\node_modules\co\index.js:50:10)
+name: 'AuthenticationError'
+message: 'Bad Request'
+status: 400
+pid: 3208
+hostname: ghm-pc
+
+2018-01-21 08:40:45,792 WARN 3208 [-/::1/-/63ms POST /login] nodejs.AuthenticationError: Bad Request
+    at allFailed (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at Strategy.authenticate (D:\JS\passport\node_modules\passport-local\lib\strategy.js:75:17)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:348:16)
+    at authenticate (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:349:7)
+    at Promise (D:\JS\passport\node_modules\egg-passport\lib\framework.js:83:7)
+    at new Promise (<anonymous>)
+    at Object.passportAuthenticate (D:\JS\passport\node_modules\egg-passport\lib\framework.js:77:15)
+    at passportAuthenticate.next (<anonymous>)
+    at Object.dispatch (D:\JS\passport\node_modules\koa-router\lib\router.js:334:5)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (D:\JS\passport\node_modules\co\index.js:65:19)
+    at D:\JS\passport\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (D:\JS\passport\node_modules\co\index.js:50:10)
+name: 'AuthenticationError'
+message: 'Bad Request'
+status: 400
+pid: 3208
+hostname: ghm-pc
+
+2018-01-21 08:46:48,689 WARN 3208 [-/::1/-/3ms POST /login] nodejs.AuthenticationError: Bad Request
+    at allFailed (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at Strategy.authenticate (D:\JS\passport\node_modules\passport-local\lib\strategy.js:75:17)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:348:16)
+    at authenticate (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:349:7)
+    at Promise (D:\JS\passport\node_modules\egg-passport\lib\framework.js:83:7)
+    at new Promise (<anonymous>)
+    at Object.passportAuthenticate (D:\JS\passport\node_modules\egg-passport\lib\framework.js:77:15)
+    at passportAuthenticate.next (<anonymous>)
+    at Object.dispatch (D:\JS\passport\node_modules\koa-router\lib\router.js:334:5)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (D:\JS\passport\node_modules\co\index.js:65:19)
+    at D:\JS\passport\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (D:\JS\passport\node_modules\co\index.js:50:10)
+name: 'AuthenticationError'
+message: 'Bad Request'
+status: 400
+pid: 3208
+hostname: ghm-pc
+
+2018-01-21 11:06:37,333 WARN 11120 [-/::1/-/12ms POST /login] nodejs.AuthenticationError: Bad Request
+    at allFailed (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at Strategy.authenticate (D:\JS\passport\node_modules\passport-local\lib\strategy.js:75:17)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:348:16)
+    at authenticate (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:349:7)
+    at Promise (D:\JS\passport\node_modules\egg-passport\lib\framework.js:83:7)
+    at new Promise (<anonymous>)
+    at Object.passportAuthenticate (D:\JS\passport\node_modules\egg-passport\lib\framework.js:77:15)
+    at passportAuthenticate.next (<anonymous>)
+    at Object.dispatch (D:\JS\passport\node_modules\koa-router\lib\router.js:334:5)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (D:\JS\passport\node_modules\co\index.js:65:19)
+    at D:\JS\passport\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (D:\JS\passport\node_modules\co\index.js:50:10)
+name: 'AuthenticationError'
+message: 'Bad Request'
+status: 400
+pid: 11120
+hostname: ghm-pc
+
+2018-01-21 13:36:56,504 WARN 14564 [-/127.0.0.1/-/17ms POST /login] nodejs.AuthenticationError: Unauthorized
+    at allFailed (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at verified (D:\JS\passport\node_modules\passport-local\lib\strategy.js:82:30)
+    at D:\JS\passport\node_modules\egg-passport\lib\passport.js:76:7
+    at Generator.next (<anonymous>)
+    at onFulfilled (D:\JS\passport\node_modules\co\index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+name: 'AuthenticationError'
+message: 'Unauthorized'
+status: 401
+pid: 14564
+hostname: ghm-pc
+
+2018-01-21 14:45:25,692 WARN 1632 [-/127.0.0.1/-/16ms POST /login] nodejs.AuthenticationError: Unauthorized
+    at allFailed (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at verified (D:\JS\passport\node_modules\passport-local\lib\strategy.js:82:30)
+    at D:\JS\passport\node_modules\egg-passport\lib\passport.js:76:7
+    at Generator.next (<anonymous>)
+    at onFulfilled (D:\JS\passport\node_modules\co\index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+name: 'AuthenticationError'
+message: 'Unauthorized'
+status: 401
+pid: 1632
+hostname: ghm-pc
+
+2018-01-21 14:52:09,959 WARN 11712 [-/127.0.0.1/-/23ms POST /login] nodejs.AuthenticationError: Unauthorized
+    at allFailed (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at verified (D:\JS\passport\node_modules\passport-local\lib\strategy.js:82:30)
+    at D:\JS\passport\node_modules\egg-passport\lib\passport.js:76:7
+    at Generator.next (<anonymous>)
+    at onFulfilled (D:\JS\passport\node_modules\co\index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+name: 'AuthenticationError'
+message: 'Unauthorized'
+status: 401
+pid: 11712
+hostname: ghm-pc
+
+2018-01-21 15:21:38,868 WARN 1608 [-/127.0.0.1/-/21ms POST /login] nodejs.AuthenticationError: Unauthorized
+    at allFailed (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at verified (D:\JS\passport\node_modules\passport-local\lib\strategy.js:82:30)
+    at D:\JS\passport\node_modules\egg-passport\lib\passport.js:76:7
+    at Generator.next (<anonymous>)
+    at onFulfilled (D:\JS\passport\node_modules\co\index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+name: 'AuthenticationError'
+message: 'Unauthorized'
+status: 401
+pid: 1608
+hostname: ghm-pc
+
+2018-01-21 15:27:09,581 WARN 1608 [-/127.0.0.1/-/14ms POST /login] nodejs.AuthenticationError: Unauthorized
+    at allFailed (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at verified (D:\JS\passport\node_modules\passport-local\lib\strategy.js:82:30)
+    at D:\JS\passport\node_modules\egg-passport\lib\passport.js:76:7
+    at Generator.next (<anonymous>)
+    at onFulfilled (D:\JS\passport\node_modules\co\index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+name: 'AuthenticationError'
+message: 'Unauthorized'
+status: 401
+pid: 1608
+hostname: ghm-pc
+
+2018-01-21 15:27:24,781 WARN 1608 [-/127.0.0.1/-/10ms POST /login] nodejs.AuthenticationError: Unauthorized
+    at allFailed (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (D:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at verified (D:\JS\passport\node_modules\passport-local\lib\strategy.js:82:30)
+    at D:\JS\passport\node_modules\egg-passport\lib\passport.js:76:7
+    at Generator.next (<anonymous>)
+    at onFulfilled (D:\JS\passport\node_modules\co\index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+name: 'AuthenticationError'
+message: 'Unauthorized'
+status: 401
+pid: 1608
+hostname: ghm-pc
+

@@ -1,0 +1,104 @@
+[
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/",
+    "regexp": "/^(?:\\/(?=$))?$/",
+    "stack": [
+      "E:\\JS\\passport2\\app\\controller\\home.js#HomeController.root()"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/home",
+    "regexp": "/^\\/home(?:\\/(?=$))?$/",
+    "stack": [
+      "E:\\JS\\passport2\\app\\controller\\home.js#HomeController.render()"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/login",
+    "regexp": "/^\\/login(?:\\/(?=$))?$/",
+    "stack": [
+      "passportAuthenticate"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/login",
+    "regexp": "/^\\/login(?:\\/(?=$))?$/",
+    "stack": [
+      "E:\\JS\\passport2\\app\\controller\\home.js#HomeController.login()"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/currentUser",
+    "regexp": "/^\\/currentUser(?:\\/(?=$))?$/",
+    "stack": [
+      "E:\\JS\\passport2\\app\\controller\\home.js#HomeController.currentuser()"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/logout",
+    "regexp": "/^\\/logout(?:\\/(?=$))?$/",
+    "stack": [
+      "E:\\JS\\passport2\\app\\controller\\home.js#HomeController.logout()"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/rule",
+    "regexp": "/^\\/rule(?:\\/(?=$))?$/",
+    "stack": [
+      "E:\\JS\\passport2\\app\\controller\\user.js#UserController.getuser()"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/rule",
+    "regexp": "/^\\/rule(?:\\/(?=$))?$/",
+    "stack": [
+      "E:\\JS\\passport2\\app\\controller\\user.js#UserController.adduser()"
+    ]
+  }
+]

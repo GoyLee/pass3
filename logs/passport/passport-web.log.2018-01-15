@@ -1,0 +1,325 @@
+2018-01-15 10:48:38,411 WARN 7708 [-/::1/-/51ms POST /login] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2018-01-15 10:48:38,415 WARN 7708 [-/::1/-/55ms POST /login] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (E:\JS\eggExamples\passport\node_modules\koa\lib\context.js:89:23)
+    at Object.assertCsrf (E:\JS\eggExamples\passport\node_modules\egg-security\app\extend\context.js:148:17)
+    at Object.csrf (E:\JS\eggExamples\passport\node_modules\egg-security\lib\middlewares\csrf.js:31:10)
+    at csrf.next (<anonymous>)
+    at Object.<anonymous> (E:\JS\eggExamples\passport\node_modules\koa-compose\index.js:28:5)
+    at Generator.next (<anonymous>)
+    at onFulfilled (E:\JS\eggExamples\passport\node_modules\co\index.js:65:19)
+    at E:\JS\eggExamples\passport\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (E:\JS\eggExamples\passport\node_modules\co\index.js:50:10)
+message: 'invalid csrf token'
+pid: 7708
+hostname: USER-GALVAKJA59
+
+2018-01-15 10:53:38,648 WARN 6476 [-/::1/-/32ms POST /login] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2018-01-15 10:53:38,652 WARN 6476 [-/::1/-/36ms POST /login] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (E:\JS\eggExamples\passport\node_modules\koa\lib\context.js:89:23)
+    at Object.assertCsrf (E:\JS\eggExamples\passport\node_modules\egg-security\app\extend\context.js:148:17)
+    at Object.csrf (E:\JS\eggExamples\passport\node_modules\egg-security\lib\middlewares\csrf.js:31:10)
+    at csrf.next (<anonymous>)
+    at Object.<anonymous> (E:\JS\eggExamples\passport\node_modules\koa-compose\index.js:28:5)
+    at Generator.next (<anonymous>)
+    at onFulfilled (E:\JS\eggExamples\passport\node_modules\co\index.js:65:19)
+    at E:\JS\eggExamples\passport\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (E:\JS\eggExamples\passport\node_modules\co\index.js:50:10)
+message: 'invalid csrf token'
+pid: 6476
+hostname: USER-GALVAKJA59
+
+2018-01-15 10:54:21,184 WARN 7580 [-/::1/-/28ms POST /login] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2018-01-15 10:54:21,187 WARN 7580 [-/::1/-/31ms POST /login] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (E:\JS\eggExamples\passport\node_modules\koa\lib\context.js:89:23)
+    at Object.assertCsrf (E:\JS\eggExamples\passport\node_modules\egg-security\app\extend\context.js:148:17)
+    at Object.csrf (E:\JS\eggExamples\passport\node_modules\egg-security\lib\middlewares\csrf.js:31:10)
+    at csrf.next (<anonymous>)
+    at Object.<anonymous> (E:\JS\eggExamples\passport\node_modules\koa-compose\index.js:28:5)
+    at Generator.next (<anonymous>)
+    at onFulfilled (E:\JS\eggExamples\passport\node_modules\co\index.js:65:19)
+    at E:\JS\eggExamples\passport\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (E:\JS\eggExamples\passport\node_modules\co\index.js:50:10)
+message: 'invalid csrf token'
+pid: 7580
+hostname: USER-GALVAKJA59
+
+2018-01-15 11:03:35,016 WARN 3800 [-/::1/-/34ms POST /login] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2018-01-15 11:03:35,019 WARN 3800 [-/::1/-/37ms POST /login] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (E:\JS\eggExamples\passport\node_modules\koa\lib\context.js:89:23)
+    at Object.assertCsrf (E:\JS\eggExamples\passport\node_modules\egg-security\app\extend\context.js:148:17)
+    at Object.csrf (E:\JS\eggExamples\passport\node_modules\egg-security\lib\middlewares\csrf.js:31:10)
+    at csrf.next (<anonymous>)
+    at Object.<anonymous> (E:\JS\eggExamples\passport\node_modules\koa-compose\index.js:28:5)
+    at Generator.next (<anonymous>)
+    at onFulfilled (E:\JS\eggExamples\passport\node_modules\co\index.js:65:19)
+    at E:\JS\eggExamples\passport\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (E:\JS\eggExamples\passport\node_modules\co\index.js:50:10)
+message: 'invalid csrf token'
+pid: 3800
+hostname: USER-GALVAKJA59
+
+2018-01-15 11:03:55,377 WARN 3800 [-/::1/-/2ms POST /login] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2018-01-15 11:03:55,378 WARN 3800 [-/::1/-/3ms POST /login] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (E:\JS\eggExamples\passport\node_modules\koa\lib\context.js:89:23)
+    at Object.assertCsrf (E:\JS\eggExamples\passport\node_modules\egg-security\app\extend\context.js:148:17)
+    at Object.csrf (E:\JS\eggExamples\passport\node_modules\egg-security\lib\middlewares\csrf.js:31:10)
+    at csrf.next (<anonymous>)
+    at Object.<anonymous> (E:\JS\eggExamples\passport\node_modules\koa-compose\index.js:28:5)
+    at Generator.next (<anonymous>)
+    at onFulfilled (E:\JS\eggExamples\passport\node_modules\co\index.js:65:19)
+    at E:\JS\eggExamples\passport\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (E:\JS\eggExamples\passport\node_modules\co\index.js:50:10)
+message: 'invalid csrf token'
+pid: 3800
+hostname: USER-GALVAKJA59
+
+2018-01-15 11:14:00,676 WARN 8072 [-/::1/-/29ms POST /login] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2018-01-15 11:14:00,679 WARN 8072 [-/::1/-/31ms POST /login] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (E:\JS\eggExamples\passport\node_modules\koa\lib\context.js:89:23)
+    at Object.assertCsrf (E:\JS\eggExamples\passport\node_modules\egg-security\app\extend\context.js:148:17)
+    at Object.csrf (E:\JS\eggExamples\passport\node_modules\egg-security\lib\middlewares\csrf.js:31:10)
+    at csrf.next (<anonymous>)
+    at Object.<anonymous> (E:\JS\eggExamples\passport\node_modules\koa-compose\index.js:28:5)
+    at Generator.next (<anonymous>)
+    at onFulfilled (E:\JS\eggExamples\passport\node_modules\co\index.js:65:19)
+    at E:\JS\eggExamples\passport\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (E:\JS\eggExamples\passport\node_modules\co\index.js:50:10)
+message: 'invalid csrf token'
+pid: 8072
+hostname: USER-GALVAKJA59
+
+2018-01-15 11:25:17,320 WARN 3448 [-/::1/-/32ms POST /login] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2018-01-15 11:25:17,324 WARN 3448 [-/::1/-/36ms POST /login] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (E:\JS\eggExamples\passport\node_modules\koa\lib\context.js:89:23)
+    at Object.assertCsrf (E:\JS\eggExamples\passport\node_modules\egg-security\app\extend\context.js:148:17)
+    at Object.csrf (E:\JS\eggExamples\passport\node_modules\egg-security\lib\middlewares\csrf.js:31:10)
+    at csrf.next (<anonymous>)
+    at Object.<anonymous> (E:\JS\eggExamples\passport\node_modules\koa-compose\index.js:28:5)
+    at Generator.next (<anonymous>)
+    at onFulfilled (E:\JS\eggExamples\passport\node_modules\co\index.js:65:19)
+    at E:\JS\eggExamples\passport\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (E:\JS\eggExamples\passport\node_modules\co\index.js:50:10)
+message: 'invalid csrf token'
+pid: 3448
+hostname: USER-GALVAKJA59
+
+2018-01-15 11:28:16,447 WARN 4560 [-/::1/-/35ms POST /login?_csrf=WKzscuzI-LtVbAWY7YHUBhIpvpipM1Kbq6XQ] nodejs.AuthenticationError: Unauthorized
+    at allFailed (E:\JS\eggExamples\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (E:\JS\eggExamples\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (E:\JS\eggExamples\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at verified (E:\JS\eggExamples\passport\node_modules\passport-local\lib\strategy.js:82:30)
+    at E:\JS\eggExamples\passport\node_modules\egg-passport\lib\passport.js:76:7
+    at Generator.next (<anonymous>)
+    at onFulfilled (E:\JS\eggExamples\passport\node_modules\co\index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+name: 'AuthenticationError'
+message: 'Unauthorized'
+status: 401
+pid: 4560
+hostname: USER-GALVAKJA59
+
+2018-01-15 11:28:35,715 WARN 4560 [-/::1/-/3ms POST /login?_csrf=UDwbbSfq-eNA_n4tkxVArXLKoJqDAVwKh0Yg] nodejs.AuthenticationError: Unauthorized
+    at allFailed (E:\JS\eggExamples\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (E:\JS\eggExamples\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (E:\JS\eggExamples\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at verified (E:\JS\eggExamples\passport\node_modules\passport-local\lib\strategy.js:82:30)
+    at E:\JS\eggExamples\passport\node_modules\egg-passport\lib\passport.js:76:7
+    at Generator.next (<anonymous>)
+    at onFulfilled (E:\JS\eggExamples\passport\node_modules\co\index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+name: 'AuthenticationError'
+message: 'Unauthorized'
+status: 401
+pid: 4560
+hostname: USER-GALVAKJA59
+
+2018-01-15 11:30:18,420 WARN 4560 [-/::1/-/6ms POST /login?_csrf=UDwbbSfq-eNA_n4tkxVArXLKoJqDAVwKh0Yg] nodejs.AuthenticationError: Unauthorized
+    at allFailed (E:\JS\eggExamples\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (E:\JS\eggExamples\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (E:\JS\eggExamples\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at verified (E:\JS\eggExamples\passport\node_modules\passport-local\lib\strategy.js:82:30)
+    at E:\JS\eggExamples\passport\node_modules\egg-passport\lib\passport.js:76:7
+    at Generator.next (<anonymous>)
+    at onFulfilled (E:\JS\eggExamples\passport\node_modules\co\index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+name: 'AuthenticationError'
+message: 'Unauthorized'
+status: 401
+pid: 4560
+hostname: USER-GALVAKJA59
+
+2018-01-15 11:30:22,444 WARN 4560 [-/::1/-/2ms POST /login?_csrf=UDwbbSfq-eNA_n4tkxVArXLKoJqDAVwKh0Yg] nodejs.AuthenticationError: Unauthorized
+    at allFailed (E:\JS\eggExamples\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (E:\JS\eggExamples\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (E:\JS\eggExamples\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at verified (E:\JS\eggExamples\passport\node_modules\passport-local\lib\strategy.js:82:30)
+    at E:\JS\eggExamples\passport\node_modules\egg-passport\lib\passport.js:76:7
+    at Generator.next (<anonymous>)
+    at onFulfilled (E:\JS\eggExamples\passport\node_modules\co\index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+name: 'AuthenticationError'
+message: 'Unauthorized'
+status: 401
+pid: 4560
+hostname: USER-GALVAKJA59
+
+2018-01-15 11:30:34,169 WARN 4560 [-/::1/-/2ms POST /login?_csrf=0q2ibIg0-2SfykgJ0mSGpF2Q_93cv_5hZDDM] nodejs.AuthenticationError: Unauthorized
+    at allFailed (E:\JS\eggExamples\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (E:\JS\eggExamples\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (E:\JS\eggExamples\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at verified (E:\JS\eggExamples\passport\node_modules\passport-local\lib\strategy.js:82:30)
+    at E:\JS\eggExamples\passport\node_modules\egg-passport\lib\passport.js:76:7
+    at Generator.next (<anonymous>)
+    at onFulfilled (E:\JS\eggExamples\passport\node_modules\co\index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+name: 'AuthenticationError'
+message: 'Unauthorized'
+status: 401
+pid: 4560
+hostname: USER-GALVAKJA59
+
+2018-01-15 11:32:01,117 WARN 4560 [-/::1/-/3ms POST /login?_csrf=YoAkb0fO-EZlG9_wnpBq5DLognLyZHiwrvI0] nodejs.AuthenticationError: Unauthorized
+    at allFailed (E:\JS\eggExamples\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (E:\JS\eggExamples\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (E:\JS\eggExamples\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at verified (E:\JS\eggExamples\passport\node_modules\passport-local\lib\strategy.js:82:30)
+    at E:\JS\eggExamples\passport\node_modules\egg-passport\lib\passport.js:76:7
+    at Generator.next (<anonymous>)
+    at onFulfilled (E:\JS\eggExamples\passport\node_modules\co\index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+name: 'AuthenticationError'
+message: 'Unauthorized'
+status: 401
+pid: 4560
+hostname: USER-GALVAKJA59
+
+2018-01-15 16:29:25,105 WARN 2640 [-/::1/-/54ms POST /login] nodejs.AuthenticationError: Unauthorized
+    at allFailed (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at verified (E:\JS\passport\node_modules\passport-local\lib\strategy.js:82:30)
+    at E:\JS\passport\node_modules\egg-passport\lib\passport.js:76:7
+    at Generator.next (<anonymous>)
+    at onFulfilled (E:\JS\passport\node_modules\co\index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+name: 'AuthenticationError'
+message: 'Unauthorized'
+status: 401
+pid: 2640
+hostname: USER-GALVAKJA59
+
+2018-01-15 16:58:36,745 WARN 7700 [-/::1/-/32ms POST /login] nodejs.AuthenticationError: Bad Request
+    at allFailed (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at Strategy.authenticate (E:\JS\passport\node_modules\passport-local\lib\strategy.js:75:17)
+    at attempt (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:348:16)
+    at authenticate (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:349:7)
+    at Promise (E:\JS\passport\node_modules\egg-passport\lib\framework.js:83:7)
+    at new Promise (<anonymous>)
+    at Object.passportAuthenticate (E:\JS\passport\node_modules\egg-passport\lib\framework.js:77:15)
+    at passportAuthenticate.next (<anonymous>)
+    at Object.dispatch (E:\JS\passport\node_modules\koa-router\lib\router.js:334:5)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\JS\passport\node_modules\co\index.js:65:19)
+    at E:\JS\passport\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (E:\JS\passport\node_modules\co\index.js:50:10)
+name: 'AuthenticationError'
+message: 'Bad Request'
+status: 400
+pid: 7700
+hostname: USER-GALVAKJA59
+
+2018-01-15 17:00:43,760 WARN 8524 [-/::1/-/42ms POST /login] nodejs.AuthenticationError: Bad Request
+    at allFailed (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at Strategy.authenticate (E:\JS\passport\node_modules\passport-local\lib\strategy.js:75:17)
+    at attempt (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:348:16)
+    at authenticate (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:349:7)
+    at Promise (E:\JS\passport\node_modules\egg-passport\lib\framework.js:83:7)
+    at new Promise (<anonymous>)
+    at Object.passportAuthenticate (E:\JS\passport\node_modules\egg-passport\lib\framework.js:77:15)
+    at passportAuthenticate.next (<anonymous>)
+    at Object.dispatch (E:\JS\passport\node_modules\koa-router\lib\router.js:334:5)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\JS\passport\node_modules\co\index.js:65:19)
+    at E:\JS\passport\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (E:\JS\passport\node_modules\co\index.js:50:10)
+name: 'AuthenticationError'
+message: 'Bad Request'
+status: 400
+pid: 8524
+hostname: USER-GALVAKJA59
+
+2018-01-15 17:02:47,357 WARN 8524 [-/::1/-/1ms POST /login] nodejs.AuthenticationError: Bad Request
+    at allFailed (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at Strategy.authenticate (E:\JS\passport\node_modules\passport-local\lib\strategy.js:75:17)
+    at attempt (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:348:16)
+    at authenticate (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:349:7)
+    at Promise (E:\JS\passport\node_modules\egg-passport\lib\framework.js:83:7)
+    at new Promise (<anonymous>)
+    at Object.passportAuthenticate (E:\JS\passport\node_modules\egg-passport\lib\framework.js:77:15)
+    at passportAuthenticate.next (<anonymous>)
+    at Object.dispatch (E:\JS\passport\node_modules\koa-router\lib\router.js:334:5)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\JS\passport\node_modules\co\index.js:65:19)
+    at E:\JS\passport\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (E:\JS\passport\node_modules\co\index.js:50:10)
+name: 'AuthenticationError'
+message: 'Bad Request'
+status: 400
+pid: 8524
+hostname: USER-GALVAKJA59
+
+2018-01-15 17:09:09,633 WARN 8340 [-/::1/-/49ms POST /login] nodejs.AuthenticationError: Unauthorized
+    at allFailed (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at verified (E:\JS\passport\node_modules\passport-local\lib\strategy.js:82:30)
+    at E:\JS\passport\node_modules\egg-passport\lib\passport.js:76:7
+    at Generator.next (<anonymous>)
+    at onFulfilled (E:\JS\passport\node_modules\co\index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+name: 'AuthenticationError'
+message: 'Unauthorized'
+status: 401
+pid: 8340
+hostname: USER-GALVAKJA59
+
+2018-01-15 17:09:37,424 WARN 8340 [-/::1/-/8ms POST /login] nodejs.AuthenticationError: Unauthorized
+    at allFailed (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:159:21)
+    at attempt (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:167:28)
+    at Strategy.strategy.fail (E:\JS\passport\node_modules\passport\lib\middleware\authenticate.js:284:9)
+    at verified (E:\JS\passport\node_modules\passport-local\lib\strategy.js:82:30)
+    at E:\JS\passport\node_modules\egg-passport\lib\passport.js:76:7
+    at Generator.next (<anonymous>)
+    at onFulfilled (E:\JS\passport\node_modules\co\index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+name: 'AuthenticationError'
+message: 'Unauthorized'
+status: 401
+pid: 8340
+hostname: USER-GALVAKJA59
+

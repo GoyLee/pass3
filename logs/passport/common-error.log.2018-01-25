@@ -1,0 +1,27 @@
+2018-01-25 10:12:48,633 ERROR 9584 nodejs.ClusterClientNoResponseError: client no response in 1937392ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\passport2\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 9584
+hostname: USER-GALVAKJA59
+
+2018-01-25 13:57:24,518 ERROR 10032 nodejs.ClusterClientNoResponseError: client no response in 5126868ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\passport2\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 10032
+hostname: USER-GALVAKJA59
+
+2018-01-26 08:26:08,586 ERROR 10032 nodejs.ClusterClientNoResponseError: client no response in 54523506ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\passport2\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 10032
+hostname: USER-GALVAKJA59
+

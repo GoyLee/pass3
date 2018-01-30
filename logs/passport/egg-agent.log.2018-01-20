@@ -1,0 +1,27 @@
+2018-01-16 08:37:11,227 INFO 3356 [egg-logrotator] agent logger reload: got log-reload message
+2018-01-16 09:02:50,393 INFO 7508 [egg:logger] init all loggers with options: {"dir":"E:\\JS\\passport\\logs\\passport","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"passport-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"agent"}
+2018-01-16 09:02:50,766 INFO 7508 [egg-mongoose] connecting mongodb://localhost:27017/test
+2018-01-16 09:02:50,824 INFO 7508 [egg-mongoose] starting...
+2018-01-16 09:02:50,835 INFO 7508 [egg-watcher:agent] watcher start success
+2018-01-16 09:02:50,862 INFO 7508 [egg-mongoose] mongodb://localhost:27017/test connected successfully
+2018-01-16 09:02:50,863 INFO 7508 [egg-mongoose] start successfully and server status is ok
+2018-01-20 20:10:10,269 INFO 6288 [egg:logger] init all loggers with options: {"dir":"D:\\JS\\passport\\logs\\passport","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"passport-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"agent"}
+2018-01-20 20:10:11,883 INFO 6288 [egg-mongoose] connecting mongodb://localhost:27017/test
+2018-01-20 20:10:12,068 INFO 6288 [egg-mongoose] starting...
+2018-01-20 20:10:12,116 INFO 6288 [egg-watcher:agent] watcher start success
+2018-01-20 20:10:12,169 INFO 6288 [egg-mongoose] mongodb://localhost:27017/test connected successfully
+2018-01-20 20:10:12,173 INFO 6288 [egg-mongoose] start successfully and server status is ok
+2018-01-20 20:17:46,703 INFO 12780 [egg:logger] init all loggers with options: {"dir":"D:\\JS\\passport\\logs\\passport","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"passport-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"agent"}
+2018-01-20 20:17:47,839 INFO 12780 [egg-mongoose] connecting mongodb://localhost:27017/test
+2018-01-20 20:17:47,973 INFO 12780 [egg-mongoose] starting...
+2018-01-20 20:17:48,012 INFO 12780 [egg-watcher:agent] watcher start success
+2018-01-20 20:17:48,052 INFO 12780 [egg-mongoose] mongodb://localhost:27017/test connected successfully
+2018-01-20 20:17:48,055 INFO 12780 [egg-mongoose] start successfully and server status is ok
+2018-01-20 20:19:28,277 INFO 14048 [egg:logger] init all loggers with options: {"dir":"D:\\JS\\passport\\logs\\passport","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"passport-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"agent"}
+2018-01-20 20:19:30,277 INFO 14048 [egg-mongoose] connecting mongodb://localhost:27017/test
+2018-01-20 20:19:30,480 INFO 14048 [egg-mongoose] starting...
+2018-01-20 20:19:30,533 INFO 14048 [egg-watcher:agent] watcher start success
+2018-01-20 20:19:30,589 INFO 14048 [egg-mongoose] mongodb://localhost:27017/test connected successfully
+2018-01-20 20:19:30,592 INFO 14048 [egg-mongoose] start successfully and server status is ok
+2018-01-21 05:50:06,643 INFO 14048 [egg-schedule] send message to random worker: D:\JS\passport\node_modules\egg-logrotator\app\schedule\clean_log.js
+2018-01-21 05:50:06,658 INFO 14048 [egg-schedule] send message to random worker: D:\JS\passport\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
