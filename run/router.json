@@ -83,10 +83,23 @@
       "GET"
     ],
     "paramNames": [],
-    "path": "/rule",
-    "regexp": "/^\\/rule(?:\\/(?=$))?$/",
+    "path": "/dept",
+    "regexp": "/^\\/dept(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\pass3\\app\\controller\\user.js#UserController.getuser()"
+      "E:\\JS\\pass3\\app\\controller\\party.js#PartyController.getDept()"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/party",
+    "regexp": "/^\\/party(?:\\/(?=$))?$/",
+    "stack": [
+      "E:\\JS\\pass3\\app\\controller\\party.js#PartyController.getParty()"
     ]
   },
   {
@@ -95,10 +108,10 @@
       "POST"
     ],
     "paramNames": [],
-    "path": "/rule",
-    "regexp": "/^\\/rule(?:\\/(?=$))?$/",
+    "path": "/party",
+    "regexp": "/^\\/party(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\pass3\\app\\controller\\user.js#UserController.postuser()"
+      "E:\\JS\\pass3\\app\\controller\\party.js#PartyController.postParty()"
     ]
   }
 ]

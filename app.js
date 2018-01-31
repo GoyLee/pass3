@@ -25,7 +25,7 @@ app.passport.verify(async (ctx, user) => {
     //assert(user.id, 'user.id should exists');
     //ctx.login(user);
     ctx.session.type = ctx.request.body.type;
-    const existsUser = await ctx.model.User.findOne({ username: user.username, password: user.password }); //从数据库中找出user
+    const existsUser = await ctx.model.Party.findOne({ username: user.username, password: user.password }); //从数据库中找出user
     if (existsUser) {
         //console.log('get path: ' + ctx.path)
         //指定 GET 成功登录信息ctx.body的地址
@@ -46,7 +46,7 @@ app.passport.verify(async (ctx, user) => {
             currentAuthority: 'guest'
         };*/
         // 调用 model 注册新用户。打开注释可以用来新增用户！
-        //const newUser = await new ctx.model.User(user).save(function (err) { if (err) return console.error(err); });
+        //const newUser = await new ctx.model.Party(user).save(function (err) { if (err) return console.error(err); });
         //return newUser;
         return null;
     }
@@ -76,7 +76,7 @@ app.passport.verify(async (ctx, user) => {
 
   //在调用 ctx.login() 时会触发序列化操作
   app.passport.serializeUser(async (ctx, user) => {
-    //console.log('serializeUser: ', user)
+    //console.log('serializeParty: ', user)
     //done(null, user.id)
     // 处理 user
     // ...
@@ -84,8 +84,8 @@ app.passport.verify(async (ctx, user) => {
   });
   //在请求时，session中如果存在 "passport":{"user":"xxx"}时会触发定义的反序列化操作。
   app.passport.deserializeUser(async (ctx, user) => {
-    //passport.deserializeUser(async function(id, done) {
-    //    console.log('deserializeUser: ', id)
+    //passport.deserializeParty(async function(id, done) {
+    //    console.log('deserializeParty: ', id)
     //    var user = {id: 1, username: 'admin', password: '123456'}
     //    done(null, user)
     // 处理 user
@@ -104,7 +104,7 @@ app.passport.verify(async (ctx, user) => {
 /*
     function (username, password, done) {
         let where = { where: { username: username } }
-        UserModel.findOne(where).then(function (result) {
+        PartyModel.findOne(where).then(function (result) {
             if (result != null) {
                 if (result.password == password) {
                     return done(null, result)
@@ -121,13 +121,13 @@ app.passport.verify(async (ctx, user) => {
     }
 ))
 
-// serializeUser 在用户登录验证成功以后将会把用户的数据存储到 session 中
-passport.serializeUser(function (user, done) {
+// serializeParty 在用户登录验证成功以后将会把用户的数据存储到 session 中
+passport.serializeParty(function (user, done) {
     done(null, user)
 })
 
-// deserializeUser 在每次请求的时候将从 session 中读取用户对象
-passport.deserializeUser(function (user, done) {
+// deserializeParty 在每次请求的时候将从 session 中读取用户对象
+passport.deserializeParty(function (user, done) {
     return done(null, user)
 })
 

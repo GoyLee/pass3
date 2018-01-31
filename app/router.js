@@ -22,9 +22,10 @@ module.exports = app => {
   app.router.get('/logout', 'home.logout');
 
 
-  //对rule的请求，返回user
-  app.router.get('/rule', controller.user.getuser);
-  app.router.post('/rule', controller.user.postuser);
+  //对party的请求，返回user
+  app.router.get('/dept', controller.party.getDept);
+  app.router.get('/party', controller.party.getParty);
+  app.router.post('/party', controller.party.postParty);
 
   /*
   app.router.get('/logout', ctx => {

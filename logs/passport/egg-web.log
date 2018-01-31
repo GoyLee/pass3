@@ -719,3 +719,115 @@
 2018-01-30 19:11:24,120 INFO 8784 [egg-mongoose] mongodb://localhost:27017/test connected successfully
 2018-01-30 19:11:24,121 INFO 8784 [egg-mongoose] start successfully and server status is ok
 2018-01-30 19:11:24,123 INFO 8784 [egg-watcher:app] watcher start success
+2018-01-31 11:00:20,654 INFO 1148 [egg:logger] init all loggers with options: {"dir":"E:\\JS\\pass3\\logs\\passport","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"passport-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2018-01-31 11:00:20,699 INFO 1148 [egg-schedule]: register schedule E:\JS\pass3\node_modules\egg-logrotator\app\schedule\clean_log.js
+2018-01-31 11:00:20,699 INFO 1148 [egg-schedule]: register schedule E:\JS\pass3\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2018-01-31 11:00:21,052 INFO 1148 [egg-mongoose] connecting mongodb://localhost:27017/test
+2018-01-31 11:00:21,129 INFO 1148 [egg-static] starting static serve /public/ -> E:\JS\pass3\app\public
+2018-01-31 11:00:21,131 INFO 1148 [egg-security] use methodnoallow middleware
+2018-01-31 11:00:21,132 INFO 1148 [egg-security] use noopen middleware
+2018-01-31 11:00:21,132 INFO 1148 [egg-security] use nosniff middleware
+2018-01-31 11:00:21,132 INFO 1148 [egg-security] use xssProtection middleware
+2018-01-31 11:00:21,133 INFO 1148 [egg-security] use xframe middleware
+2018-01-31 11:00:21,133 INFO 1148 [egg-security] use dta middleware
+2018-01-31 11:00:21,133 INFO 1148 [egg-security] compose 6 middlewares into one security middleware
+2018-01-31 11:00:21,146 INFO 1148 [egg-mongoose] starting...
+2018-01-31 11:00:21,165 INFO 1148 [egg-mongoose] mongodb://localhost:27017/test connected successfully
+2018-01-31 11:00:21,166 INFO 1148 [egg-mongoose] start successfully and server status is ok
+2018-01-31 11:00:21,169 INFO 1148 [egg-watcher:app] watcher start success
+2018-01-31 11:24:14,132 INFO 6768 [egg:logger] init all loggers with options: {"dir":"E:\\JS\\pass3\\logs\\passport","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"passport-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2018-01-31 11:24:14,173 INFO 6768 [egg-schedule]: register schedule E:\JS\pass3\node_modules\egg-logrotator\app\schedule\clean_log.js
+2018-01-31 11:24:14,173 INFO 6768 [egg-schedule]: register schedule E:\JS\pass3\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2018-01-31 11:24:14,577 INFO 6768 [egg-mongoose] connecting mongodb://localhost:27017/test
+2018-01-31 11:24:14,647 INFO 6768 [egg-static] starting static serve /public/ -> E:\JS\pass3\app\public
+2018-01-31 11:24:14,649 INFO 6768 [egg-security] use methodnoallow middleware
+2018-01-31 11:24:14,650 INFO 6768 [egg-security] use noopen middleware
+2018-01-31 11:24:14,650 INFO 6768 [egg-security] use nosniff middleware
+2018-01-31 11:24:14,650 INFO 6768 [egg-security] use xssProtection middleware
+2018-01-31 11:24:14,651 INFO 6768 [egg-security] use xframe middleware
+2018-01-31 11:24:14,651 INFO 6768 [egg-security] use dta middleware
+2018-01-31 11:24:14,651 INFO 6768 [egg-security] compose 6 middlewares into one security middleware
+2018-01-31 11:24:14,664 INFO 6768 [egg-mongoose] starting...
+2018-01-31 11:24:14,686 INFO 6768 [egg-mongoose] mongodb://localhost:27017/test connected successfully
+2018-01-31 11:24:14,687 INFO 6768 [egg-mongoose] start successfully and server status is ok
+2018-01-31 11:24:14,690 INFO 6768 [egg-watcher:app] watcher start success
+2018-01-31 11:40:19,375 INFO 7892 [egg:logger] init all loggers with options: {"dir":"E:\\JS\\pass3\\logs\\passport","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"passport-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2018-01-31 11:40:19,428 INFO 7892 [egg-schedule]: register schedule E:\JS\pass3\node_modules\egg-logrotator\app\schedule\clean_log.js
+2018-01-31 11:40:19,428 INFO 7892 [egg-schedule]: register schedule E:\JS\pass3\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2018-01-31 11:40:19,758 INFO 7892 [egg-mongoose] connecting mongodb://localhost:27017/test
+2018-01-31 11:40:19,837 INFO 7892 [egg-static] starting static serve /public/ -> E:\JS\pass3\app\public
+2018-01-31 11:40:19,842 INFO 7892 [egg-security] use methodnoallow middleware
+2018-01-31 11:40:19,843 INFO 7892 [egg-security] use noopen middleware
+2018-01-31 11:40:19,844 INFO 7892 [egg-security] use nosniff middleware
+2018-01-31 11:40:19,845 INFO 7892 [egg-security] use xssProtection middleware
+2018-01-31 11:40:19,846 INFO 7892 [egg-security] use xframe middleware
+2018-01-31 11:40:19,847 INFO 7892 [egg-security] use dta middleware
+2018-01-31 11:40:19,847 INFO 7892 [egg-security] compose 6 middlewares into one security middleware
+2018-01-31 11:40:19,878 INFO 7892 [egg-mongoose] starting...
+2018-01-31 11:40:19,933 INFO 7892 [egg-mongoose] mongodb://localhost:27017/test connected successfully
+2018-01-31 11:40:19,935 INFO 7892 [egg-mongoose] start successfully and server status is ok
+2018-01-31 11:40:19,940 INFO 7892 [egg-watcher:app] watcher start success
+2018-01-31 11:51:52,949 INFO 7876 [egg:logger] init all loggers with options: {"dir":"E:\\JS\\pass3\\logs\\passport","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"passport-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2018-01-31 11:51:53,003 INFO 7876 [egg-schedule]: register schedule E:\JS\pass3\node_modules\egg-logrotator\app\schedule\clean_log.js
+2018-01-31 11:51:53,003 INFO 7876 [egg-schedule]: register schedule E:\JS\pass3\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2018-01-31 11:51:53,338 INFO 7876 [egg-mongoose] connecting mongodb://localhost:27017/test
+2018-01-31 11:51:53,414 INFO 7876 [egg-static] starting static serve /public/ -> E:\JS\pass3\app\public
+2018-01-31 11:51:53,416 INFO 7876 [egg-security] use methodnoallow middleware
+2018-01-31 11:51:53,417 INFO 7876 [egg-security] use noopen middleware
+2018-01-31 11:51:53,417 INFO 7876 [egg-security] use nosniff middleware
+2018-01-31 11:51:53,417 INFO 7876 [egg-security] use xssProtection middleware
+2018-01-31 11:51:53,418 INFO 7876 [egg-security] use xframe middleware
+2018-01-31 11:51:53,418 INFO 7876 [egg-security] use dta middleware
+2018-01-31 11:51:53,418 INFO 7876 [egg-security] compose 6 middlewares into one security middleware
+2018-01-31 11:51:53,430 INFO 7876 [egg-mongoose] starting...
+2018-01-31 11:51:53,480 INFO 7876 [egg-mongoose] mongodb://localhost:27017/test connected successfully
+2018-01-31 11:51:53,482 INFO 7876 [egg-mongoose] start successfully and server status is ok
+2018-01-31 11:51:53,485 INFO 7876 [egg-watcher:app] watcher start success
+2018-01-31 16:43:43,257 INFO 11036 [egg:logger] init all loggers with options: {"dir":"E:\\JS\\pass3\\logs\\passport","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"passport-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2018-01-31 16:43:43,323 INFO 11036 [egg-schedule]: register schedule E:\JS\pass3\node_modules\egg-logrotator\app\schedule\clean_log.js
+2018-01-31 16:43:43,323 INFO 11036 [egg-schedule]: register schedule E:\JS\pass3\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2018-01-31 16:43:43,623 INFO 11036 [egg-mongoose] connecting mongodb://localhost:27017/test
+2018-01-31 16:43:43,706 INFO 11036 [egg-static] starting static serve /public/ -> E:\JS\pass3\app\public
+2018-01-31 16:43:43,709 INFO 11036 [egg-security] use methodnoallow middleware
+2018-01-31 16:43:43,709 INFO 11036 [egg-security] use noopen middleware
+2018-01-31 16:43:43,710 INFO 11036 [egg-security] use nosniff middleware
+2018-01-31 16:43:43,710 INFO 11036 [egg-security] use xssProtection middleware
+2018-01-31 16:43:43,711 INFO 11036 [egg-security] use xframe middleware
+2018-01-31 16:43:43,711 INFO 11036 [egg-security] use dta middleware
+2018-01-31 16:43:43,711 INFO 11036 [egg-security] compose 6 middlewares into one security middleware
+2018-01-31 16:43:43,742 INFO 11036 [egg-mongoose] starting...
+2018-01-31 16:43:43,794 INFO 11036 [egg-mongoose] mongodb://localhost:27017/test connected successfully
+2018-01-31 16:43:43,795 INFO 11036 [egg-mongoose] start successfully and server status is ok
+2018-01-31 16:43:43,799 INFO 11036 [egg-watcher:app] watcher start success
+2018-01-31 16:43:59,875 INFO 1820 [egg:logger] init all loggers with options: {"dir":"E:\\JS\\pass3\\logs\\passport","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"passport-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2018-01-31 16:43:59,927 INFO 1820 [egg-schedule]: register schedule E:\JS\pass3\node_modules\egg-logrotator\app\schedule\clean_log.js
+2018-01-31 16:43:59,927 INFO 1820 [egg-schedule]: register schedule E:\JS\pass3\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2018-01-31 16:44:00,235 INFO 1820 [egg-mongoose] connecting mongodb://localhost:27017/test
+2018-01-31 16:44:00,306 INFO 1820 [egg-static] starting static serve /public/ -> E:\JS\pass3\app\public
+2018-01-31 16:44:00,308 INFO 1820 [egg-security] use methodnoallow middleware
+2018-01-31 16:44:00,309 INFO 1820 [egg-security] use noopen middleware
+2018-01-31 16:44:00,309 INFO 1820 [egg-security] use nosniff middleware
+2018-01-31 16:44:00,310 INFO 1820 [egg-security] use xssProtection middleware
+2018-01-31 16:44:00,311 INFO 1820 [egg-security] use xframe middleware
+2018-01-31 16:44:00,312 INFO 1820 [egg-security] use dta middleware
+2018-01-31 16:44:00,312 INFO 1820 [egg-security] compose 6 middlewares into one security middleware
+2018-01-31 16:44:00,331 INFO 1820 [egg-mongoose] starting...
+2018-01-31 16:44:00,349 INFO 1820 [egg-mongoose] mongodb://localhost:27017/test connected successfully
+2018-01-31 16:44:00,350 INFO 1820 [egg-mongoose] start successfully and server status is ok
+2018-01-31 16:44:00,352 INFO 1820 [egg-watcher:app] watcher start success
+2018-01-31 16:44:34,576 INFO 468 [egg:logger] init all loggers with options: {"dir":"E:\\JS\\pass3\\logs\\passport","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"passport-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2018-01-31 16:44:34,647 INFO 468 [egg-schedule]: register schedule E:\JS\pass3\node_modules\egg-logrotator\app\schedule\clean_log.js
+2018-01-31 16:44:34,647 INFO 468 [egg-schedule]: register schedule E:\JS\pass3\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2018-01-31 16:44:34,969 INFO 468 [egg-mongoose] connecting mongodb://localhost:27017/test
+2018-01-31 16:44:35,046 INFO 468 [egg-static] starting static serve /public/ -> E:\JS\pass3\app\public
+2018-01-31 16:44:35,049 INFO 468 [egg-security] use methodnoallow middleware
+2018-01-31 16:44:35,049 INFO 468 [egg-security] use noopen middleware
+2018-01-31 16:44:35,050 INFO 468 [egg-security] use nosniff middleware
+2018-01-31 16:44:35,050 INFO 468 [egg-security] use xssProtection middleware
+2018-01-31 16:44:35,051 INFO 468 [egg-security] use xframe middleware
+2018-01-31 16:44:35,051 INFO 468 [egg-security] use dta middleware
+2018-01-31 16:44:35,051 INFO 468 [egg-security] compose 6 middlewares into one security middleware
+2018-01-31 16:44:35,071 INFO 468 [egg-mongoose] starting...
+2018-01-31 16:44:35,106 INFO 468 [egg-mongoose] mongodb://localhost:27017/test connected successfully
+2018-01-31 16:44:35,107 INFO 468 [egg-mongoose] start successfully and server status is ok
+2018-01-31 16:44:35,110 INFO 468 [egg-watcher:app] watcher start success
