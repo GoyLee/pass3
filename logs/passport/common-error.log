@@ -1,0 +1,36 @@
+2018-02-01 17:05:52,576 ERROR 10596 nodejs.EPERMError: Error watching file for changes: EPERM
+    at _errnoException (util.js:1024:11)
+    at FSEvent.FSWatcher._handle.onchange (fs.js:1351:9)
+code: 'EPERM'
+errno: 'EPERM'
+syscall: 'Error watching file for changes:'
+filename: null
+dir: 'E:\\JS\\pass3\\app\\public.1'
+name: 'EPERMError'
+pid: 10596
+hostname: USER-GALVAKJA59
+
+2018-02-01 17:05:56,154 ERROR 10596 nodejs.EPERMError: Error watching file for changes: EPERM
+    at _errnoException (util.js:1024:11)
+    at FSEvent.FSWatcher._handle.onchange (fs.js:1351:9)
+code: 'EPERM'
+errno: 'EPERM'
+syscall: 'Error watching file for changes:'
+filename: null
+dir: 'E:\\JS\\pass3\\app\\public.2'
+name: 'EPERMError'
+pid: 10596
+hostname: USER-GALVAKJA59
+
+2018-02-01 17:05:59,168 ERROR 10596 nodejs.EPERMError: Error watching file for changes: EPERM
+    at _errnoException (util.js:1024:11)
+    at FSEvent.FSWatcher._handle.onchange (fs.js:1351:9)
+code: 'EPERM'
+errno: 'EPERM'
+syscall: 'Error watching file for changes:'
+filename: null
+dir: 'E:\\JS\\pass3\\app\\public.3'
+name: 'EPERMError'
+pid: 10596
+hostname: USER-GALVAKJA59
+

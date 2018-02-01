@@ -1,5 +1,7 @@
 'use strict';
 
+const toTreeData = require('../public/utils');
+
 const Controller = require('egg').Controller;
 
 class PartyController extends Controller {
@@ -19,8 +21,8 @@ class PartyController extends Controller {
         const Party = await ctx.model.Party.find({type: '部门'}).sort('updatedAt'); //从数据库中找出Party
         //console.log(Party);
         const result = {
-          list: Party,
-          currentDept: Party[0].username || 'xxxxxxxx',
+          currentDept: Party[0].username || 'xxxxxxxx', //此句放前面，因toTreeData会破坏Party！
+          list: toTreeData(Party),
         }  
         ctx.body = result;
         console.log('BODY:' + JSON.stringify(ctx.body));
@@ -34,7 +36,6 @@ class PartyController extends Controller {
       ctx.body = '404 not found-myy';
     };
   }
-
 
   async getParty() {
     const ctx = this.ctx;
