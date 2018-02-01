@@ -20,10 +20,18 @@ class PartyController extends Controller {
         //var product = await ProductCol.find({_id: id}) // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise！
         const Party = await ctx.model.Party.find({type: '部门'}).sort('updatedAt'); //从数据库中找出Party
         //console.log(Party);
-        const result = {
-          currentDept: Party[0].username || 'xxxxxxxx', //此句放前面，因toTreeData会破坏Party！
-          list: toTreeData(Party),
-        }  
+        var result;
+        if(Party.length > 0){
+          result = {
+            currentDept: Party[0].username || 'xxxxxxxx', //此句放前面，因toTreeData会破坏Party！
+            list: toTreeData(Party),
+          }
+        } else { //避免返回undefined
+          result = {
+            currentDept: '',
+            list: []
+          };
+        };
         ctx.body = result;
         console.log('BODY:' + JSON.stringify(ctx.body));
       } catch (e) {
