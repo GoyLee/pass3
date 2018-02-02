@@ -15,7 +15,7 @@ module.exports = app => {
       provider: { type: String }, //认证方法
       createdAt: { type:Date, default: Date.now()}, //
       updatedAt: { type:Date },
-      belongTo: { type: mongoose.Schema.Types.ObjectId, ref: 'Party' }, //上级所属部门，唯一
+      pid: { type: mongoose.Schema.Types.ObjectId, ref: 'Party' }, //上级所属部门，唯一
       tags: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }], //所属的项目、小组; addedAt: { type:Date, default: Date.now() 
       //树状的表中不要有children字段！会和前端的数据重复！
     });

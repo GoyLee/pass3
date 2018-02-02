@@ -29,7 +29,7 @@ class PartyController extends Controller {
         } else { //避免返回undefined
           result = {
             currentDept: '',
-            list: []
+            list: [],
           };
         };
         ctx.body = result;
