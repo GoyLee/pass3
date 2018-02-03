@@ -43,3 +43,24 @@ name: 'ClusterClientNoResponseError'
 pid: 1744
 hostname: USER-GALVAKJA59
 
+2018-02-03 11:23:03,732 ERROR 1392 [-/127.0.0.1/-/111ms POST /party] nodejs.SyntaxError: Identifier 'newParty' has already been declared
+    at callController (D:\JS\pass3\node_modules\egg-core\lib\loader\mixin\controller.js:125:18)
+    at callController.next (<anonymous>)
+    at onFulfilled (D:\JS\pass3\node_modules\co\index.js:65:19)
+    at D:\JS\pass3\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (D:\JS\pass3\node_modules\co\index.js:50:10)
+    at Object.toPromise (D:\JS\pass3\node_modules\co\index.js:118:63)
+    at next (D:\JS\pass3\node_modules\co\index.js:99:29)
+    at onFulfilled (D:\JS\pass3\node_modules\co\index.js:69:7)
+    at D:\JS\pass3\node_modules\co\index.js:54:5
+    at new Promise (<anonymous>)
+    at Object.co (D:\JS\pass3\node_modules\co\index.js:50:10)
+    at Object.toPromise (D:\JS\pass3\node_modules\co\index.js:118:63)
+    at next (D:\JS\pass3\node_modules\co\index.js:99:29)
+    at onFulfilled (D:\JS\pass3\node_modules\co\index.js:69:7)
+    at <anonymous>
+
+pid: 1392
+hostname: ghm-pc
+

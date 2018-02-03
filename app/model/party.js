@@ -29,6 +29,11 @@ module.exports = app => {
       }
       next();
     })
+    PartySchema.pre('findOneAndUpdate', function(next) { //TODO: 本中间件不起作用！
+      //const currentDate = (new Date()).now()
+      this.updatedAt = Date.now(); //currentDate;
+      next();
+    })
 
     return mongoose.model('Party', PartySchema);
   }

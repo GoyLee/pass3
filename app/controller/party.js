@@ -2,6 +2,8 @@
 
 const toTreeData = require('../public/utils');
 
+const getUrlParams = require('../public/getParams')
+
 const Controller = require('egg').Controller;
 
 class PartyController extends Controller {
@@ -11,7 +13,7 @@ class PartyController extends Controller {
   //index = async (ctx) => {
   //  ctx.body = await ctx.model.Party.find({});  // you should use upper case to access mongoose model
   //}
-
+  //返回部门树，不是列表！
   async getDept() {
     const ctx = this.ctx;
     //TODO: 提供异常和错误处理
@@ -33,7 +35,7 @@ class PartyController extends Controller {
           };
         };
         ctx.body = result;
-        console.log('BODY:' + JSON.stringify(ctx.body));
+        console.log('GET DEPT:' + JSON.stringify(ctx.body));
       } catch (e) {
         console.log(`###error ${e}`)
         ctx.body = 'Data not found -myy';
@@ -50,8 +52,19 @@ class PartyController extends Controller {
     //TODO: 提供异常和错误处理
     if (ctx.isAuthenticated()) {
       try{
+        var where = {};
+        //console.log('___QUERY:' + JSON.stringify(params));
+        if (ctx.query.selectedDept) {
+          console.log('___QUERY:' + ctx.query.selectedDept);
+          where = {...where, pid: ctx.query.selectedDept }
+        }
+        //const params = getUrlParams(ctx.request.href);
+        //if (params.selectedDept) {
+        //  console.log('___QUERY:' + params.selectedDept);
+        //  where = {...where, pid: params.selectedDept }
+        //}
         //var product = await ProductCol.find({_id: id}) // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise！
-        const Party = await ctx.model.Party.find({}).sort('-updatedAt'); //从数据库中找出Party
+        const Party = await ctx.model.Party.find(where).sort('-updatedAt'); //从数据库中找出Party
         //console.log(Party);
         const result = {
           list: Party,
@@ -63,7 +76,7 @@ class PartyController extends Controller {
           },
         }  
         ctx.body = result;
-        //console.log('BODY:' + JSON.stringify(ctx.body));
+        console.log('___GETPARTY:' + JSON.stringify(ctx.body));
       } catch (e) {
         console.log(`###error ${e}`)
         ctx.body = 'Data not found -myy';
@@ -85,8 +98,13 @@ class PartyController extends Controller {
         switch (party.method) {
           case 'post':
             //party = {...party, createdAt: Date.now() };
-            console.log('To add: ' + JSON.stringify(party));
+            console.log('ADD:' + JSON.stringify(party));
             const newParty = await new ctx.model.Party(party).save(); //function (err) { if (err) return console.error(err); }
+            break;
+          case 'update':
+            console.log('UPDATE:' + JSON.stringify(party));
+            party = {...party, updatedAt: Date.now()};
+            const oldParty = await ctx.model.Party.findByIdAndUpdate(party._id, party); //function (err) { if (err) return console.error(err); }
             break;
           case 'delete':
             //console.log('To delete: ' + JSON.stringify(party).id);
