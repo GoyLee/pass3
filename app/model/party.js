@@ -14,12 +14,13 @@ module.exports = app => {
       authority: { type: String }, //界面功能权限，角色，admin, user, guest
       provider: { type: String }, //认证方法
       createdAt: { type:Date, default: Date.now()}, //
-      updatedAt: { type:Date },
+      updatedAt: { type:Date, default: Date.now() },
       pid: { type: mongoose.Schema.Types.ObjectId, ref: 'Party' }, //上级所属部门，唯一
       tags: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }], //所属的项目、小组; addedAt: { type:Date, default: Date.now() 
       //树状的表中不要有children字段！会和前端的数据重复！
     });
     
+    /*
     PartySchema.pre('save', function(next) { 
       //const currentDate = (new Date()).now()
       if (!this.createdAt) {
@@ -29,12 +30,14 @@ module.exports = app => {
       }
       next();
     })
-    PartySchema.pre('findOneAndUpdate', function(next) { //TODO: 本中间件不起作用！
+    //mongoose: pre/post中间件对update类函数不起作用！
+   
+    PartySchema.pre('findOneAndUpdate', function(next) { 
       //const currentDate = (new Date()).now()
       this.updatedAt = Date.now(); //currentDate;
       next();
     })
-
+    */
     return mongoose.model('Party', PartySchema);
   }
   
