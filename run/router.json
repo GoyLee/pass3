@@ -9,7 +9,7 @@
     "path": "/",
     "regexp": "/^(?:\\/(?=$))?$/",
     "stack": [
-      "D:\\JS\\pass3\\app\\controller\\home.js#HomeController.root()"
+      "E:\\JS\\pass3\\app\\controller\\home.js#HomeController.root()"
     ]
   },
   {
@@ -22,7 +22,7 @@
     "path": "/home",
     "regexp": "/^\\/home(?:\\/(?=$))?$/",
     "stack": [
-      "D:\\JS\\pass3\\app\\controller\\home.js#HomeController.render()"
+      "E:\\JS\\pass3\\app\\controller\\home.js#HomeController.render()"
     ]
   },
   {
@@ -47,7 +47,7 @@
     "path": "/login",
     "regexp": "/^\\/login(?:\\/(?=$))?$/",
     "stack": [
-      "D:\\JS\\pass3\\app\\controller\\home.js#HomeController.login()"
+      "E:\\JS\\pass3\\app\\controller\\home.js#HomeController.login()"
     ]
   },
   {
@@ -60,7 +60,7 @@
     "path": "/currentUser",
     "regexp": "/^\\/currentUser(?:\\/(?=$))?$/",
     "stack": [
-      "D:\\JS\\pass3\\app\\controller\\home.js#HomeController.currentuser()"
+      "E:\\JS\\pass3\\app\\controller\\home.js#HomeController.currentuser()"
     ]
   },
   {
@@ -73,7 +73,7 @@
     "path": "/logout",
     "regexp": "/^\\/logout(?:\\/(?=$))?$/",
     "stack": [
-      "D:\\JS\\pass3\\app\\controller\\home.js#HomeController.logout()"
+      "E:\\JS\\pass3\\app\\controller\\home.js#HomeController.logout()"
     ]
   },
   {
@@ -86,7 +86,7 @@
     "path": "/dept",
     "regexp": "/^\\/dept(?:\\/(?=$))?$/",
     "stack": [
-      "D:\\JS\\pass3\\app\\controller\\party.js#PartyController.getDept()"
+      "E:\\JS\\pass3\\app\\controller\\party.js#PartyController.getDept()"
     ]
   },
   {
@@ -99,7 +99,7 @@
     "path": "/party",
     "regexp": "/^\\/party(?:\\/(?=$))?$/",
     "stack": [
-      "D:\\JS\\pass3\\app\\controller\\party.js#PartyController.getParty()"
+      "E:\\JS\\pass3\\app\\controller\\party.js#PartyController.getParty()"
     ]
   },
   {
@@ -111,7 +111,32 @@
     "path": "/party",
     "regexp": "/^\\/party(?:\\/(?=$))?$/",
     "stack": [
-      "D:\\JS\\pass3\\app\\controller\\party.js#PartyController.postParty()"
+      "E:\\JS\\pass3\\app\\controller\\party.js#PartyController.postParty()"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/requirement",
+    "regexp": "/^\\/requirement(?:\\/(?=$))?$/",
+    "stack": [
+      "E:\\JS\\pass3\\app\\controller\\requirement.js#RequirementController.getRequirement()"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/requirement",
+    "regexp": "/^\\/requirement(?:\\/(?=$))?$/",
+    "stack": [
+      "E:\\JS\\pass3\\app\\controller\\requirement.js#RequirementController.postRequirement()"
     ]
   }
 ]

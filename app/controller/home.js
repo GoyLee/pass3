@@ -89,6 +89,7 @@ class HomeController extends Controller {
         <a href="/">Home</a> | <a href="/user">User</a>
       </div>`;
     } else {
+      ctx.response.status = 401; //'用户没有权限（令牌、用户名、密码错误）。'
       ctx.session.returnTo = ctx.path; //设定下次成功后自动跳转回本api
       ctx.body = `
         <div>

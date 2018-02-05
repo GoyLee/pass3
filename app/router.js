@@ -21,12 +21,16 @@ module.exports = app => {
   //logout 在user.logout中！！！
   app.router.get('/logout', 'home.logout');
 
-
-  //对party的请求，返回user
+  //对party的请求
   app.router.get('/dept', controller.party.getDept);
   app.router.get('/party', controller.party.getParty);
   app.router.post('/party', controller.party.postParty);
 
+  //对requirement的请求
+  //app.router.get('/reqtree', controller.party.getReqTree);
+  app.router.get('/requirement', controller.requirement.getRequirement);
+  app.router.post('/requirement', controller.requirement.postRequirement);
+  
   /*
   app.router.get('/logout', ctx => {
     ctx.body = {auth: ctx.isAuthenticated(), user: ctx.user} //ctx.user - 获取当前已登录的用户信息
