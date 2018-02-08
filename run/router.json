@@ -83,6 +83,19 @@
       "GET"
     ],
     "paramNames": [],
+    "path": "/userdept",
+    "regexp": "/^\\/userdept(?:\\/(?=$))?$/",
+    "stack": [
+      "E:\\JS\\pass3\\app\\controller\\party.js#PartyController.getUserDept()"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
     "path": "/dept",
     "regexp": "/^\\/dept(?:\\/(?=$))?$/",
     "stack": [

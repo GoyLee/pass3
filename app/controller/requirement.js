@@ -14,6 +14,7 @@ class RequirementController extends Controller {
   //  ctx.body = await ctx.model.Requirement.find({});  // you should use upper case to access mongoose model
   //}
   //返回部门树，不是列表！
+  /*
   async getReqTree() {
     const ctx = this.ctx;
     //TODO: 提供异常和错误处理
@@ -48,7 +49,7 @@ class RequirementController extends Controller {
       //ctx.body = '404 not found-myy';
       ctx.status = 401;
     };
-  }
+  } */
   //返回Requirement列表
   async getRequirement() {
     const ctx = this.ctx;
@@ -97,7 +98,7 @@ class RequirementController extends Controller {
         }  
         ctx.body = result;
         ctx.status = 200;
-        console.log('___GETPARTY:' + JSON.stringify(ctx.body));
+        console.log('___GETREQ:' + JSON.stringify(ctx.body));
       } catch (e) {
         console.log(`###error ${e}`)
         ctx.body = 'Data not found -myy';

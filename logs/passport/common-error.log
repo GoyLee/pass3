@@ -52,3 +52,147 @@ name: 'ClusterClientNoResponseError'
 pid: 11976
 hostname: USER-GALVAKJA59
 
+2018-02-08 14:29:08,254 ERROR 6020 nodejs.ReferenceError: p1 is not defined
+    at Party.map (E:\JS\pass3\app\controller\party.js:191:14)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 6020
+hostname: USER-GALVAKJA59
+
+2018-02-08 14:29:08,258 ERROR 6020 nodejs.ReferenceError: p1 is not defined
+    at Party.map (E:\JS\pass3\app\controller\party.js:191:14)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 6020
+hostname: USER-GALVAKJA59
+
+2018-02-08 14:29:08,259 ERROR 6020 nodejs.ReferenceError: p1 is not defined
+    at Party.map (E:\JS\pass3\app\controller\party.js:191:14)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 6020
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:04:10,229 ERROR 8164 nodejs.TypeError: undefined is not a function
+    at Party.map (E:\JS\pass3\app\controller\party.js:192:28)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 8164
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:04:10,237 ERROR 8164 nodejs.TypeError: undefined is not a function
+    at Party.map (E:\JS\pass3\app\controller\party.js:192:28)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 8164
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:04:10,239 ERROR 8164 nodejs.TypeError: undefined is not a function
+    at Party.map (E:\JS\pass3\app\controller\party.js:192:28)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 8164
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:50:28,602 ERROR 8660 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:58)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 8660
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:50:28,603 ERROR 8660 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:58)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 8660
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:50:28,604 ERROR 8660 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:58)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 8660
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:55:42,630 ERROR 10124 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:53)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 10124
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:55:42,631 ERROR 10124 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:53)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 10124
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:55:42,632 ERROR 10124 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:53)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 10124
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:59:11,198 ERROR 9280 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:53)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 9280
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:59:11,199 ERROR 9280 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:53)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 9280
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:59:11,200 ERROR 9280 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:53)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 9280
+hostname: USER-GALVAKJA59
+
+2018-02-08 16:00:01,114 ERROR 9860 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:53)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 9860
+hostname: USER-GALVAKJA59
+
+2018-02-08 16:00:01,116 ERROR 9860 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:53)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 9860
+hostname: USER-GALVAKJA59
+
+2018-02-08 16:00:01,117 ERROR 9860 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:53)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 9860
+hostname: USER-GALVAKJA59
+

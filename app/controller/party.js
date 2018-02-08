@@ -171,6 +171,44 @@ class PartyController extends Controller {
         ctx.body = '404 not found-myy';
     };
   };
-};
 
+  //返回用户名+部门名列表
+  async getUserDept() {
+    const ctx = this.ctx;
+    //TODO: 提供异常和错误处理
+    if (ctx.isAuthenticated()) {
+      try{
+        //console.log('___QUERY:' + JSON.stringify(ctx.query));
+        var where = {type: '员工', status: '正常'};
+
+        //var product = await ProductCol.find({_id: id}) // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise
+        //const count = await ctx.model.Party.find(where).count();
+        var Party = await ctx.model.Party.find(where).sort('username').select('_id username pid');
+                      //.populate({path: 'pid', select: 'username'}); //.aggregate({$project:{myid:"$_id"}})
+        //console.log(Party);
+        Party = Party.filter( (p) => (p.pid) ); //找出有父节点的
+        const fun = async (p) => {
+          var p1 = await ctx.model.Party.find({_id: p.pid});
+          var t = {_id:p._id, username: p.username, pid: p1[0].pid, deptname: p1[0].username};
+          //console.log(JSON.stringify(t));
+          return t;
+        }
+        var Party = await (Promise.all( Party.map( p => fun (p))));  //map返回的是promise数组，并不是value数组，必须Promise.all同步，再用await保证中断。
+        const result = Party;  
+        ctx.body = result;
+        ctx.status = 200;
+        console.log('___GETUSERDEPT:' + JSON.stringify(ctx.body));
+      } catch (e) {
+        console.log(`###error ${e}`)
+        ctx.body = 'Data not found -myy';
+        ctx.status = 500;
+        //throw e
+      }
+    } else {
+      ctx.response.status = 401; //'用户没有权限（令牌、用户名、密码错误）。会导致antPro客户端重新登录'
+      ctx.body = '404 not found-myy';
+      //ctx.status = 401;
+    };
+  };
+};
 module.exports = PartyController;
