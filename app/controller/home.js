@@ -63,7 +63,8 @@ class HomeController extends Controller {
     if (ctx.isAuthenticated()) {
       ctx.body = {
         name: ctx.user.username,
-        id: ctx.user._id,
+        _id: ctx.user._id,
+        pid: ctx.user.pid,
         avatar: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
         userid: '00000001',
         notifyCount: 18,

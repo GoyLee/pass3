@@ -1,0 +1,198 @@
+2018-02-04 18:11:13,006 ERROR 17304 nodejs.ClusterClientNoResponseError: client no response in 5208148ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (D:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 17304
+hostname: ghm-pc
+
+2018-02-05 14:00:17,557 ERROR 6612 nodejs.ClusterClientNoResponseError: client no response in 97999ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 6612
+hostname: USER-GALVAKJA59
+
+2018-02-05 16:46:14,566 ERROR 4944 nodejs.ClusterClientNoResponseError: client no response in 418121ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 4944
+hostname: USER-GALVAKJA59
+
+2018-02-05 17:39:27,543 ERROR 4944 nodejs.ClusterClientNoResponseError: client no response in 212902ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 4944
+hostname: USER-GALVAKJA59
+
+2018-02-06 15:34:15,621 ERROR 11976 nodejs.ClusterClientNoResponseError: client no response in 3772492ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 11976
+hostname: USER-GALVAKJA59
+
+2018-02-06 16:50:40,509 ERROR 11976 nodejs.ClusterClientNoResponseError: client no response in 508652ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 11976
+hostname: USER-GALVAKJA59
+
+2018-02-08 14:29:08,254 ERROR 6020 nodejs.ReferenceError: p1 is not defined
+    at Party.map (E:\JS\pass3\app\controller\party.js:191:14)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 6020
+hostname: USER-GALVAKJA59
+
+2018-02-08 14:29:08,258 ERROR 6020 nodejs.ReferenceError: p1 is not defined
+    at Party.map (E:\JS\pass3\app\controller\party.js:191:14)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 6020
+hostname: USER-GALVAKJA59
+
+2018-02-08 14:29:08,259 ERROR 6020 nodejs.ReferenceError: p1 is not defined
+    at Party.map (E:\JS\pass3\app\controller\party.js:191:14)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 6020
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:04:10,229 ERROR 8164 nodejs.TypeError: undefined is not a function
+    at Party.map (E:\JS\pass3\app\controller\party.js:192:28)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 8164
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:04:10,237 ERROR 8164 nodejs.TypeError: undefined is not a function
+    at Party.map (E:\JS\pass3\app\controller\party.js:192:28)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 8164
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:04:10,239 ERROR 8164 nodejs.TypeError: undefined is not a function
+    at Party.map (E:\JS\pass3\app\controller\party.js:192:28)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 8164
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:50:28,602 ERROR 8660 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:58)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 8660
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:50:28,603 ERROR 8660 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:58)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 8660
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:50:28,604 ERROR 8660 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:58)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 8660
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:55:42,630 ERROR 10124 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:53)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 10124
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:55:42,631 ERROR 10124 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:53)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 10124
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:55:42,632 ERROR 10124 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:53)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 10124
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:59:11,198 ERROR 9280 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:53)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 9280
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:59:11,199 ERROR 9280 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:53)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 9280
+hostname: USER-GALVAKJA59
+
+2018-02-08 15:59:11,200 ERROR 9280 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:53)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 9280
+hostname: USER-GALVAKJA59
+
+2018-02-08 16:00:01,114 ERROR 9860 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:53)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 9860
+hostname: USER-GALVAKJA59
+
+2018-02-08 16:00:01,116 ERROR 9860 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:53)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 9860
+hostname: USER-GALVAKJA59
+
+2018-02-08 16:00:01,117 ERROR 9860 nodejs.TypeError: Cannot read property 'username' of undefined
+    at fun (E:\JS\pass3\app\controller\party.js:192:53)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 9860
+hostname: USER-GALVAKJA59
+

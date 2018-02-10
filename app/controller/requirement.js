@@ -67,10 +67,10 @@ class RequirementController extends Controller {
           //console.log('___QUERY:' + ctx.query.selectedDept);
           where = {...where, status: ctx.query.status }
         }
-        if (ctx.query.username) {
+        if (ctx.query.reqname) {
           //console.log('___QUERY:' + ctx.query.selectedDept);
-          const reg = new RegExp(ctx.query.username, 'i');
-          where = {...where, username: {$regex : reg}}
+          const reg = new RegExp(ctx.query.reqname, 'i');
+          where = {...where, reqname: {$regex : reg}}
         }
         let pageSize = parseInt(ctx.query.pageSize) || 10;
         let current = parseInt(ctx.query.currentPage) || 1;
@@ -148,6 +148,7 @@ class RequirementController extends Controller {
           default:
             break;
         };
+        /*
         const Requirements = await ctx.model.Requirement.find({}).sort('-updatedAt'); //从数据库中找出requirement
         //console.log(Requirement);
         const result = {
@@ -158,7 +159,8 @@ class RequirementController extends Controller {
             current: 1,
             //current: parseInt(params.currentPage, 10) || 1,
           },
-        }  
+        }*/
+        const result = {status: 'ok'};
         ctx.body = result;
         //ctx.body = newRequirement; //'Data added -myy';
       } catch (e) {

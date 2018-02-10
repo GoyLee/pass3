@@ -2,15 +2,15 @@
 module.exports = app => {
     const mongoose = app.mongoose;
     var RequirementSchema = new mongoose.Schema({
-      code: { type: String  }, //required: true, , unique: true //工号
-      name: { type: String , required: true }, //名称
+      //code: { type: String  }, //required: true, , unique: true //工号
+      reqname: { type: String , required: true }, //名称
       //desc: { type: String , required: false }, //描述
-      project: { type: String , required: false }, //IT项目 type: mongoose.Schema.Types.ObjectId
+      program: { type: String , required: false }, //IT项目群 type: mongoose.Schema.Types.ObjectId
       class: { type: String  }, //分类：项目群，项目，年度，阶段，tags?
       type: { type: String  }, //应用，设备，网络，服务
       status: { type: String  }, //状态：提出，处理中（转项目），取消/拒绝，挂起，关闭
-      demander: { type: mongoose.Schema.Types.ObjectId }, //提出人，指向party
-      department: { type: mongoose.Schema.Types.ObjectId }, //提出人所属部门，指向party
+      demander: { type: String  }, //{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }, //提出人，指向party
+      department: { type: String  }, //{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }, //提出人所属部门，指向party
       owner: { type: mongoose.Schema.Types.ObjectId }, //责任人，指向party
       ownerdepartment: { type: mongoose.Schema.Types.ObjectId }, //责任人所属部门，指向party
       //budget: {type: Number }, //预算额、总额，初始设定的

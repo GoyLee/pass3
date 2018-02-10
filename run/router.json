@@ -9,7 +9,7 @@
     "path": "/",
     "regexp": "/^(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\pass3\\app\\controller\\home.js#HomeController.root()"
+      "D:\\JS\\pass3\\app\\controller\\home.js#HomeController.root()"
     ]
   },
   {
@@ -22,7 +22,7 @@
     "path": "/home",
     "regexp": "/^\\/home(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\pass3\\app\\controller\\home.js#HomeController.render()"
+      "D:\\JS\\pass3\\app\\controller\\home.js#HomeController.render()"
     ]
   },
   {
@@ -47,7 +47,7 @@
     "path": "/login",
     "regexp": "/^\\/login(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\pass3\\app\\controller\\home.js#HomeController.login()"
+      "D:\\JS\\pass3\\app\\controller\\home.js#HomeController.login()"
     ]
   },
   {
@@ -60,7 +60,7 @@
     "path": "/currentUser",
     "regexp": "/^\\/currentUser(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\pass3\\app\\controller\\home.js#HomeController.currentuser()"
+      "D:\\JS\\pass3\\app\\controller\\home.js#HomeController.currentuser()"
     ]
   },
   {
@@ -73,7 +73,20 @@
     "path": "/logout",
     "regexp": "/^\\/logout(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\pass3\\app\\controller\\home.js#HomeController.logout()"
+      "D:\\JS\\pass3\\app\\controller\\home.js#HomeController.logout()"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/userlist",
+    "regexp": "/^\\/userlist(?:\\/(?=$))?$/",
+    "stack": [
+      "D:\\JS\\pass3\\app\\controller\\party.js#PartyController.getUserList()"
     ]
   },
   {
@@ -86,7 +99,7 @@
     "path": "/userdept",
     "regexp": "/^\\/userdept(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\pass3\\app\\controller\\party.js#PartyController.getUserDept()"
+      "D:\\JS\\pass3\\app\\controller\\party.js#PartyController.getUserDept()"
     ]
   },
   {
@@ -99,7 +112,7 @@
     "path": "/dept",
     "regexp": "/^\\/dept(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\pass3\\app\\controller\\party.js#PartyController.getDept()"
+      "D:\\JS\\pass3\\app\\controller\\party.js#PartyController.getDept()"
     ]
   },
   {
@@ -112,7 +125,7 @@
     "path": "/party",
     "regexp": "/^\\/party(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\pass3\\app\\controller\\party.js#PartyController.getParty()"
+      "D:\\JS\\pass3\\app\\controller\\party.js#PartyController.getParty()"
     ]
   },
   {
@@ -124,7 +137,7 @@
     "path": "/party",
     "regexp": "/^\\/party(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\pass3\\app\\controller\\party.js#PartyController.postParty()"
+      "D:\\JS\\pass3\\app\\controller\\party.js#PartyController.postParty()"
     ]
   },
   {
@@ -137,7 +150,7 @@
     "path": "/requirement",
     "regexp": "/^\\/requirement(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\pass3\\app\\controller\\requirement.js#RequirementController.getRequirement()"
+      "D:\\JS\\pass3\\app\\controller\\requirement.js#RequirementController.getRequirement()"
     ]
   },
   {
@@ -149,7 +162,7 @@
     "path": "/requirement",
     "regexp": "/^\\/requirement(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\pass3\\app\\controller\\requirement.js#RequirementController.postRequirement()"
+      "D:\\JS\\pass3\\app\\controller\\requirement.js#RequirementController.postRequirement()"
     ]
   }
 ]

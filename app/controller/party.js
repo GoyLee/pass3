@@ -66,9 +66,12 @@ class PartyController extends Controller {
           //console.log('___QUERY:' + ctx.query.selectedDept);
           where = {...where, status: ctx.query.status }
         }
+        if (ctx.query.id) {
+          where = {...where, _id: ctx.query.id }
+        }
         if (ctx.query.username) {
           //console.log('___QUERY:' + ctx.query.selectedDept);
-          const reg = new RegExp(ctx.query.username, 'i');
+          const reg = new RegExp(ctx.query.username, 'i'); //模糊查询
           where = {...where, username: {$regex : reg}}
         }
         let pageSize = parseInt(ctx.query.pageSize) || 10;
@@ -147,6 +150,7 @@ class PartyController extends Controller {
           default:
             break;
         };
+        /*
         const Parties = await ctx.model.Party.find({}).sort('-updatedAt'); //从数据库中找出party
         //console.log(Party);
         const result = {
@@ -157,7 +161,8 @@ class PartyController extends Controller {
             current: 1,
             //current: parseInt(params.currentPage, 10) || 1,
           },
-        }  
+        } */
+        const result = {status: 'ok'};
         ctx.body = result;
         //ctx.body = newParty; //'Data added -myy';
       } catch (e) {
@@ -172,20 +177,57 @@ class PartyController extends Controller {
     };
   };
 
-  //返回用户名+部门名列表
-  async getUserDept() {
+  //返回模糊查询的用户
+  async getUserList() {
     const ctx = this.ctx;
     //TODO: 提供异常和错误处理
     if (ctx.isAuthenticated()) {
       try{
-        //console.log('___QUERY:' + JSON.stringify(ctx.query));
+        console.log('___QUERY:' + JSON.stringify(ctx.query));
         var where = {type: '员工', status: '正常'};
-
+        if (ctx.query.username) {
+          //console.log('___QUERY:' + ctx.query.selectedDept);
+          const reg = new RegExp(ctx.query.username, 'i'); //模糊查询
+          where = {...where, username: {$regex : reg}}
+        }
         //var product = await ProductCol.find({_id: id}) // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise
         //const count = await ctx.model.Party.find(where).count();
-        var Party = await ctx.model.Party.find(where).sort('username').select('_id username pid');
+        var Party = await ctx.model.Party.find(where).sort('username').select('_id username pid').limit(5);
                       //.populate({path: 'pid', select: 'username'}); //.aggregate({$project:{myid:"$_id"}})
         //console.log(Party);
+        const result = Party;  
+        ctx.body = result;
+        ctx.status = 200;
+        console.log('___GETUSERLIST:' + JSON.stringify(ctx.body));
+      } catch (e) {
+        console.log(`###error ${e}`)
+        //ctx.body = 'Data not found -myy';
+        ctx.status = 500;
+        //throw e
+      }
+    } else {
+      ctx.response.status = 401; //'用户没有权限（令牌、用户名、密码错误）。会导致antPro客户端重新登录'
+      ctx.body = '404 not found-myy';
+      //ctx.status = 401;
+    };
+  };
+  async getUserDept() {
+    const ctx = this.ctx;
+    //TODO: 目前仅找到用户上一级的部门，还需求找到特定层级的部门。
+    if (ctx.isAuthenticated()) {
+      try{
+        //console.log('___QUERY:' + JSON.stringify(ctx.query));
+        //var where = {type: '员工', status: '正常'};
+        var where;
+        if (ctx.query.id) {
+          where = {...where, _id: ctx.query.id }
+        }
+        //var product = await ProductCol.find({_id: id}) // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise
+        //const count = await ctx.model.Party.find(where).count();
+        var Party = await ctx.model.Party.find(where).select('_id username pid');//sort('username').
+                      //.populate({path: 'pid', select: 'username'}); //.aggregate({$project:{myid:"$_id"}})
+        //console.log(Party);
+        /*
         Party = Party.filter( (p) => (p.pid) ); //找出有父节点的
         const fun = async (p) => {
           var p1 = await ctx.model.Party.find({_id: p.pid});
@@ -193,8 +235,11 @@ class PartyController extends Controller {
           //console.log(JSON.stringify(t));
           return t;
         }
-        var Party = await (Promise.all( Party.map( p => fun (p))));  //map返回的是promise数组，并不是value数组，必须Promise.all同步，再用await保证中断。
-        const result = Party;  
+        //没有promise.all, await map返回的是promise数组，并不是value数组，
+        //必须先用Promise.all同步，再用await保证中断.
+        var Party = await (Promise.all( Party.map( p => fun (p))));  
+        */
+        const result = Party[0]; //return only one  
         ctx.body = result;
         ctx.status = 200;
         console.log('___GETUSERDEPT:' + JSON.stringify(ctx.body));
