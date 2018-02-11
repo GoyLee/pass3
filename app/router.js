@@ -24,7 +24,7 @@ module.exports = app => {
   //对party的请求
   app.router.get('/userlist', controller.party.getUserList);
   app.router.get('/userdept', controller.party.getUserDept);
-  app.router.get('/dept', controller.party.getDept);
+  app.router.get('/depttree', controller.party.getDeptTree);
   app.router.get('/party', controller.party.getParty);
   app.router.post('/party', controller.party.postParty);
 

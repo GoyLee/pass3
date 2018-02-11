@@ -14,7 +14,7 @@ class PartyController extends Controller {
   //  ctx.body = await ctx.model.Party.find({});  // you should use upper case to access mongoose model
   //}
   //返回部门树，不是列表！
-  async getDept() {
+  async getDeptTree() {
     const ctx = this.ctx;
     //TODO: 提供异常和错误处理
     if (ctx.isAuthenticated()) {
@@ -177,10 +177,9 @@ class PartyController extends Controller {
     };
   };
 
-  //返回模糊查询的用户
+  //返回模糊查询的用户列表
   async getUserList() {
     const ctx = this.ctx;
-    //TODO: 提供异常和错误处理
     if (ctx.isAuthenticated()) {
       try{
         console.log('___QUERY:' + JSON.stringify(ctx.query));
@@ -211,6 +210,7 @@ class PartyController extends Controller {
       //ctx.status = 401;
     };
   };
+    //返回某_id的Party
   async getUserDept() {
     const ctx = this.ctx;
     //TODO: 目前仅找到用户上一级的部门，还需求找到特定层级的部门。
