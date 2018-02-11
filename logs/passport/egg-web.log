@@ -271,3 +271,19 @@
 2018-02-11 13:53:16,996 INFO 7516 [egg-mongoose] mongodb://localhost:27017/test connected successfully
 2018-02-11 13:53:16,997 INFO 7516 [egg-mongoose] start successfully and server status is ok
 2018-02-11 13:53:16,999 INFO 7516 [egg-watcher:app] watcher start success
+2018-02-11 20:42:06,576 INFO 12212 [egg:logger] init all loggers with options: {"dir":"D:\\JS\\pass3\\logs\\passport","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"passport-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2018-02-11 20:42:06,665 INFO 12212 [egg-schedule]: register schedule D:\JS\pass3\node_modules\egg-logrotator\app\schedule\clean_log.js
+2018-02-11 20:42:06,666 INFO 12212 [egg-schedule]: register schedule D:\JS\pass3\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2018-02-11 20:42:07,308 INFO 12212 [egg-mongoose] connecting mongodb://localhost:27017/test
+2018-02-11 20:42:07,513 INFO 12212 [egg-static] starting static serve /public/ -> D:\JS\pass3\app\public
+2018-02-11 20:42:07,520 INFO 12212 [egg-security] use methodnoallow middleware
+2018-02-11 20:42:07,521 INFO 12212 [egg-security] use noopen middleware
+2018-02-11 20:42:07,523 INFO 12212 [egg-security] use nosniff middleware
+2018-02-11 20:42:07,524 INFO 12212 [egg-security] use xssProtection middleware
+2018-02-11 20:42:07,525 INFO 12212 [egg-security] use xframe middleware
+2018-02-11 20:42:07,527 INFO 12212 [egg-security] use dta middleware
+2018-02-11 20:42:07,527 INFO 12212 [egg-security] compose 6 middlewares into one security middleware
+2018-02-11 20:42:07,551 INFO 12212 [egg-mongoose] starting...
+2018-02-11 20:42:07,579 INFO 12212 [egg-mongoose] mongodb://localhost:27017/test connected successfully
+2018-02-11 20:42:07,581 INFO 12212 [egg-mongoose] start successfully and server status is ok
+2018-02-11 20:42:07,585 INFO 12212 [egg-watcher:app] watcher start success
