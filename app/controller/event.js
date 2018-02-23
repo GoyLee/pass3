@@ -44,9 +44,9 @@ class EventController extends Controller {
         // you should use upper case to access mongoose model
         //var product = await ProductCol.find({_id: id}) // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise
         // const count = await ctx.model.Event.find(where).count();
-        const Event = await ctx.model.Event.find(where).sort(sorter); //.skip((current-1) * pageSize).limit(pageSize); //从数据库中找出Event
+        const Events = await ctx.model.Event.find(where).sort(sorter); //.skip((current-1) * pageSize).limit(pageSize); //从数据库中找出Event
         //console.log(Event);
-        const result = Event; //M: 要返回列表，不要返回对象
+        const result = Events; //M: 要返回列表，不要返回对象
         ctx.body = result;
         ctx.status = 200;
         console.log('___GETREQ:' + JSON.stringify(ctx.body));
@@ -99,18 +99,6 @@ class EventController extends Controller {
           default:
             break;
         };
-        /*
-        const Events = await ctx.model.Event.find({}).sort('-updatedAt'); //从数据库中找出event
-        //console.log(Event);
-        const result = {
-          list: Events,
-          pagination: {
-            total: Events.length,
-            pageSize: 10,
-            current: 1,
-            //current: parseInt(params.currentPage, 10) || 1,
-          },
-        }*/
         const result = {status: 'ok'};
         ctx.body = result;
         //ctx.body = newEvent; //'Data added -myy';
