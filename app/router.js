@@ -32,6 +32,10 @@ module.exports = app => {
   //app.router.get('/reqtree', controller.party.getReqTree);
   app.router.get('/requirement', controller.requirement.getRequirement);
   app.router.post('/requirement', controller.requirement.postRequirement);
+
+  //对event的请求
+  app.router.get('/event', controller.event.getEvent);
+  app.router.post('/event', controller.event.postEvent);
   
   /*
   app.router.get('/logout', ctx => {

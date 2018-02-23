@@ -166,7 +166,7 @@ class RequirementController extends Controller {
       } catch (e) {
         console.log(`###error ${e}`)
         ctx.status = 400;
-        ctx.body = 'Add failed -myy';
+        ctx.body = {status: 'Error!'};
         //throw e
       }
     } else {

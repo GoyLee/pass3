@@ -23,6 +23,7 @@ module.exports = app => {
       //树状的表中不要有children字段！会和前端的数据重复！
     });
     
+    //mongoose: pre/post中间件对update类函数不起作用！
     /*
     PartySchema.pre('save', function(next) { 
       //const currentDate = (new Date()).now()
@@ -33,7 +34,6 @@ module.exports = app => {
       }
       next();
     })
-    //mongoose: pre/post中间件对update类函数不起作用！
    
     PartySchema.pre('findOneAndUpdate', function(next) { 
       //const currentDate = (new Date()).now()
