@@ -25,6 +25,7 @@ module.exports = app => {
   app.router.get('/userlist', controller.party.getUserList);
   app.router.get('/userdept', controller.party.getUserDept);
   app.router.get('/depttree', controller.party.getDeptTree);
+  app.router.get('/tagtree', controller.party.getTagTree);
   app.router.get('/party', controller.party.getParty);
   app.router.post('/party', controller.party.postParty);
 

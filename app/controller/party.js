@@ -9,17 +9,66 @@ const Controller = require('egg').Controller;
 class PartyController extends Controller {
 
   // app/controller/party.js
-
-  //index = async (ctx) => {
-  //  ctx.body = await ctx.model.Party.find({});  // you should use upper case to access mongoose model
-  //}
+  //返回标签树，不是列表！
+  async getTagTree() {
+    const ctx = this.ctx;
+    //TODO: 提供异常和错误处理
+    if (ctx.isAuthenticated()) {
+      try{
+        console.log('___QUERY_TAGS:' + JSON.stringify(ctx.query));
+        // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise！
+        // const Party = await ctx.model.Party.find({type: '标签'}).sort('updatedAt'); //从数据库中找出Party
+        const tags = await ctx.model.Party.aggregate( [
+          { $match : { type: '标签' } }, //筛选记录
+          { $unwind : { path:"$tags", preserveNullAndEmptyArrays: true }}, //标签展开
+          { $project : { username:1, pid : "$tags" } }, //字段筛选并改名
+          //这里要响应tree，每个节点仅需知道其父节点即可，不需知道祖父以上的节点，用$unwind更简单！
+          // { $graphLookup: { //多级查找
+          //       from: "parties",
+          //       startWith: "$tags",
+          //       connectFromField: "tags",
+          //       connectToField: "_id",
+          //       maxDepth: 0,
+          //       depthField: "numConnections",
+          //       as: "ancestors"
+          //   },
+          // }
+        ] )
+        // console.log('__TAGS:' + JSON.stringify(tags));
+        var result;
+        if(tags.length > 0){
+          result = {
+            currentDept: tags[0].username || 'xxxxxxxx', //此句放前面，因toTreeData会破坏tags！
+            list: toTreeData(tags),
+          }
+        } else { //避免返回undefined
+          result = {
+            currentDept: '',
+            list: [],
+          };
+        };
+        ctx.body = result;
+        ctx.status = 200;
+        console.log('GET TAGS:' + JSON.stringify(ctx.body));
+      } catch (e) {
+        console.log(`###error ${e}`)
+        ctx.body = 'Data not found -myy';
+        ctx.status = 500;
+        //throw e
+      }
+    } else {
+      //ctx.body = '404 not found-myy';
+      ctx.status = 401; //'用户没有权限（令牌、用户名、密码错误）。会导致antPro客户端重新登录'
+    };
+  }
+  
   //返回部门树，不是列表！
   async getDeptTree() {
     const ctx = this.ctx;
     //TODO: 提供异常和错误处理
     if (ctx.isAuthenticated()) {
       try{
-        //var product = await ProductCol.find({_id: id}) // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise！
+        // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise！
         const Party = await ctx.model.Party.find({type: '部门'}).sort('updatedAt'); //从数据库中找出Party
         //console.log(Party);
         var result;
@@ -44,9 +93,8 @@ class PartyController extends Controller {
         //throw e
       }
     } else {
-    //  ctx.response.status = 401; //'用户没有权限（令牌、用户名、密码错误）。会导致antPro客户端重新登录'
       //ctx.body = '404 not found-myy';
-      ctx.status = 401;
+      ctx.status = 401; //'用户没有权限（令牌、用户名、密码错误）。会导致antPro客户端重新登录'
     };
   }
   //返回Party列表
@@ -256,4 +304,5 @@ class PartyController extends Controller {
     };
   };
 };
+
 module.exports = PartyController;

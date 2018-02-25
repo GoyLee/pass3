@@ -15,7 +15,7 @@ class EventController extends Controller {
   //返回Event列表
   async getEvent() {
     const ctx = this.ctx;
-    //TODO: 提供异常和错误处理
+
     if (ctx.isAuthenticated()) {
       try{
         console.log('___QUERY:' + JSON.stringify(ctx.query));
