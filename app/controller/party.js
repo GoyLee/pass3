@@ -19,7 +19,7 @@ class PartyController extends Controller {
         // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise！
         // const Party = await ctx.model.Party.find({type: '标签'}).sort('updatedAt'); //从数据库中找出Party
         const tags = await ctx.model.Party.aggregate( [
-          { $match : { type: '标签' } }, //筛选记录
+          { $match : { type: '标签' } }, //记录筛选
           { $unwind : { path:"$tags", preserveNullAndEmptyArrays: true }}, //标签展开
           { $project : { username:1, pid : "$tags" } }, //字段筛选并改名
           //这里要响应tree，每个节点仅需知道其父节点即可，不需知道祖父以上的节点，用$unwind更简单！
@@ -49,7 +49,7 @@ class PartyController extends Controller {
         };
         ctx.body = result;
         ctx.status = 200;
-        console.log('GET TAGS:' + JSON.stringify(ctx.body));
+        console.log('GET_TAGS_TREE:' + JSON.stringify(ctx.body));
       } catch (e) {
         console.log(`###error ${e}`)
         ctx.body = 'Data not found -myy';
@@ -69,13 +69,19 @@ class PartyController extends Controller {
     if (ctx.isAuthenticated()) {
       try{
         // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise！
-        const Party = await ctx.model.Party.find({type: '部门'}).sort('updatedAt'); //从数据库中找出Party
+        // const Party = await ctx.model.Party.find({type: '部门'}).sort('updatedAt'); //从数据库中找出Party
         //console.log(Party);
+        const depts = await ctx.model.Party.aggregate( [
+          { $match : { type: '部门' } }, //记录筛选
+          { $unwind : { path:"$pid", preserveNullAndEmptyArrays: true }}, //部门逐级展开
+          { $project : { username:1, pid : 1 } }, //字段筛选，_id默认已选
+          { $group : { _id : "$_id", username: {$last: '$username'}, pid: {$last: '$pid'} } }, //去重并取叶子节点（unwind后的最后一行记录）
+        ] );
         var result;
-        if(Party.length > 0){
+        if(depts.length > 0){
           result = {
-            currentDept: Party[0].username || 'xxxxxxxx', //此句放前面，因toTreeData会破坏Party！
-            list: toTreeData(Party),
+            currentDept: depts[0].username || 'xxxxxxxx', //此句放前面，因toTreeData会破坏depts！
+            list: toTreeData(depts),
           }
         } else { //避免返回undefined
           result = {
@@ -85,7 +91,7 @@ class PartyController extends Controller {
         };
         ctx.body = result;
         ctx.status = 200;
-        console.log('GET DEPT:' + JSON.stringify(ctx.body));
+        console.log('GET_DEPT_TREE:' + JSON.stringify(ctx.body));
       } catch (e) {
         console.log(`###error ${e}`)
         ctx.body = 'Data not found -myy';
@@ -108,7 +114,11 @@ class PartyController extends Controller {
         //where因koa\egg的ctx.query不能解析嵌套对象，只能是按业务逐表定制
         if (ctx.query.selectedDept) {
           //console.log('___QUERY:' + ctx.query.selectedDept);
-          where = {...where, pid: ctx.query.selectedDept }
+          where = {...where, pid: ctx.query.selectedDept } //it works! Here, pid is [], ~pid 'has' selectedDept!, Mongo doesn't has 'has' operator!
+        }
+        if (ctx.query.selectedTag) {
+          //console.log('___QUERY:' + ctx.query.selectedDept);
+          where = {...where, tags: ctx.query.selectedTag } //it works! Here, tags is [], ~tags 'has' selectedTag!, Mongo doesn't has 'has' operator!
         }
         if (ctx.query.status) {
           //console.log('___QUERY:' + ctx.query.selectedDept);
