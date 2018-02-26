@@ -16,7 +16,7 @@ module.exports = app => {
       createdAt: { type:Date, default: Date.now()}, //
       updatedAt: { type:Date, default: Date.now() },
       pid: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }], //上级所属部门，唯一
-      tags: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }], //所属的项目、小组; addedAt: { type:Date, default: Date.now() 
+      tags: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }], //所属的项目、小组
       //树状的表中不要有children字段！会和前端的数据重复！
     });
     

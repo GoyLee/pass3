@@ -1,13 +1,9 @@
 'use strict';
-
 const toTreeData = require('../public/utils');
-
 const getUrlParams = require('../public/getParams')
-
 const Controller = require('egg').Controller;
 
 class PartyController extends Controller {
-
   // app/controller/party.js
   //返回标签树，不是列表！
   async getTagTree() {
@@ -61,7 +57,6 @@ class PartyController extends Controller {
       ctx.status = 401; //'用户没有权限（令牌、用户名、密码错误）。会导致antPro客户端重新登录'
     };
   }
-  
   //返回部门树，不是列表！
   async getDeptTree() {
     const ctx = this.ctx;
@@ -171,7 +166,7 @@ class PartyController extends Controller {
       //ctx.status = 401;
     };
   }
-
+  //增删改
   async postParty() {
     const ctx = this.ctx;
     //TODO: 提供异常和错误处理
@@ -268,13 +263,12 @@ class PartyController extends Controller {
       //ctx.status = 401;
     };
   };
-    //返回某_id的Party
+  //返回某_id的Party
   async getUserDept() {
     const ctx = this.ctx;
-    //TODO: 目前仅找到用户上一级的部门，还需求找到特定层级的部门。
     if (ctx.isAuthenticated()) {
       try{
-        //console.log('___QUERY:' + JSON.stringify(ctx.query));
+        console.log('___UerDeptQUERY:' + JSON.stringify(ctx.query));
         //var where = {type: '员工', status: '正常'};
         var where;
         if (ctx.query.id) {

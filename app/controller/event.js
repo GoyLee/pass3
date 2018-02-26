@@ -1,21 +1,12 @@
 'use strict';
-
 const getUrlParams = require('../public/getParams')
-
 const Controller = require('egg').Controller;
 
 class EventController extends Controller {
-
   // app/controller/event.js
-
-  //index = async (ctx) => {
-  //  ctx.body = await ctx.model.Event.find({}); 
-  //}
-
   //返回Event列表
   async getEvent() {
     const ctx = this.ctx;
-
     if (ctx.isAuthenticated()) {
       try{
         console.log('___QUERY:' + JSON.stringify(ctx.query));
@@ -65,7 +56,6 @@ class EventController extends Controller {
 
   async postEvent() {
     const ctx = this.ctx;
-    //TODO: 提供异常和错误处理
     if (ctx.isAuthenticated()) {
       try{
         var event = ctx.request.body;

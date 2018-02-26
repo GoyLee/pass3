@@ -1,15 +1,10 @@
 'use strict';
-
 const toTreeData = require('../public/utils');
-
 const getUrlParams = require('../public/getParams')
-
 const Controller = require('egg').Controller;
 
 class RequirementController extends Controller {
-
   // app/controller/requirement.js
-
   //index = async (ctx) => {
   //  ctx.body = await ctx.model.Requirement.find({});  // you should use upper case to access mongoose model
   //}
@@ -17,7 +12,6 @@ class RequirementController extends Controller {
   /*
   async getReqTree() {
     const ctx = this.ctx;
-    //TODO: 提供异常和错误处理
     if (ctx.isAuthenticated()) {
       try{
         //var product = await ProductCol.find({_id: id}) // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise！
@@ -53,7 +47,6 @@ class RequirementController extends Controller {
   //返回Requirement列表
   async getRequirement() {
     const ctx = this.ctx;
-    //TODO: 提供异常和错误处理
     if (ctx.isAuthenticated()) {
       try{
         console.log('___QUERY:' + JSON.stringify(ctx.query));
@@ -85,10 +78,20 @@ class RequirementController extends Controller {
         //}
         //var product = await ProductCol.find({_id: id}) // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise
         const count = await ctx.model.Requirement.find(where).count();
-        const Requirement = await ctx.model.Requirement.find(where).sort(sorter).skip((current-1) * pageSize).limit(pageSize); //从数据库中找出Requirement
-        //console.log(Requirement);
+        //从数据库中找出Requirement
+        const Requirements = await ctx.model.Requirement.find(where)
+              .sort(sorter)
+              .skip((current-1) * pageSize)
+              .limit(pageSize)
+              .populate( {
+                path: 'demanderId',
+                // match: { age: { $gte: 21 }},
+                select: 'username -_id',
+                // options: { limit: 5 },
+              });
+        //console.log(Requirements);
         const result = {
-          list: Requirement,
+          list: Requirements,
           pagination: {
             total: count,
             pageSize: pageSize,
@@ -114,7 +117,6 @@ class RequirementController extends Controller {
 
   async postRequirement() {
     const ctx = this.ctx;
-    //TODO: 提供异常和错误处理
     if (ctx.isAuthenticated()) {
       try{
         var requirement = ctx.request.body;
@@ -122,12 +124,12 @@ class RequirementController extends Controller {
         switch (requirement.method) {
           case 'post':
             //requirement = {...requirement, createdAt: Date.now() };
-            console.log('ADD:' + JSON.stringify(requirement));
+            console.log('___ADD:' + JSON.stringify(requirement));
             const newRequirement = await new ctx.model.Requirement(requirement).save(); //function (err) { if (err) return console.error(err); }
             ctx.status = 201;
             break;
           case 'update':
-            console.log('UPDATE:' + JSON.stringify(requirement));
+            console.log('___UPDATE:' + JSON.stringify(requirement));
             requirement = {...requirement, updatedAt: Date.now()};
             const oldRequirement = await ctx.model.Requirement.findByIdAndUpdate(requirement._id, requirement); //function (err) { if (err) return console.error(err); }
             ctx.status = 201;
@@ -135,7 +137,7 @@ class RequirementController extends Controller {
           case 'delete':
             //console.log('To delete: ' + JSON.stringify(requirement).id);
             var ids = requirement.id.split(",");
-            console.log('DELETE:' + ids);
+            console.log('___DELETE:' + ids);
             //var ObjectID = ctx.app.mongoose.Schema.Types.ObjectId;
             //var id = new ObjectID;
             //ids.map( id => ctx.model.Requirement.remove({_id: id})); //err => { if (err) return console.log(err); })); 
