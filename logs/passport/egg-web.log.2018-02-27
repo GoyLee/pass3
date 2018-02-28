@@ -1,0 +1,10 @@
+2018-02-27 20:58:54,256 INFO 12960 [egg-logrotator] app logger reload: got log-reload message
+2018-02-28 01:34:07,632 WARN 12960 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2018-02-28 01:34:07,644 WARN 12960 [ClusterClient:Watcher] follower closed, and try to init it again
+2018-02-28 01:34:07,645 INFO 12960 [egg-schedule]: get message: {"key":"D:\\JS\\pass3\\node_modules\\egg-logrotator\\app\\schedule\\clean_log.js"}
+2018-02-28 01:34:07,646 INFO 12960 [egg-schedule]: get message: {"key":"D:\\JS\\pass3\\node_modules\\egg-logrotator\\app\\schedule\\rotate_by_file.js"}
+2018-02-28 01:34:07,648 INFO 12960 [egg-logrotator] clean all log before 31 days
+2018-02-28 01:34:07,648 INFO 12960 [egg-schedule] D:\JS\pass3\node_modules\egg-logrotator\app\schedule\clean_log.js excute succeed, used 3ms
+2018-02-28 01:34:07,694 INFO 12960 [egg-logrotator] broadcast log-reload
+2018-02-28 01:34:07,694 INFO 12960 [egg-logrotator] rotate files success by DayRotator, files ["D:\\JS\\pass3\\logs\\passport\\common-error.log -> D:\\JS\\pass3\\logs\\passport\\common-error.log.2018-02-27","D:\\JS\\pass3\\logs\\passport\\passport-web.log -> D:\\JS\\pass3\\logs\\passport\\passport-web.log.2018-02-27","D:\\JS\\pass3\\logs\\passport\\egg-web.log -> D:\\JS\\pass3\\logs\\passport\\egg-web.log.2018-02-27","D:\\JS\\pass3\\logs\\passport\\egg-agent.log -> D:\\JS\\pass3\\logs\\passport\\egg-agent.log.2018-02-27"]
+2018-02-28 01:34:07,694 INFO 12960 [egg-schedule] D:\JS\pass3\node_modules\egg-logrotator\app\schedule\rotate_by_file.js excute succeed, used 48ms

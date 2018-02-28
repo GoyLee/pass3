@@ -1,0 +1,3 @@
+2018-02-27 20:58:54,262 INFO 12804 [egg-logrotator] agent logger reload: got log-reload message
+2018-02-28 01:34:07,633 INFO 12804 [egg-schedule] send message to random worker: D:\JS\pass3\node_modules\egg-logrotator\app\schedule\clean_log.js
+2018-02-28 01:34:07,639 INFO 12804 [egg-schedule] send message to random worker: D:\JS\pass3\node_modules\egg-logrotator\app\schedule\rotate_by_file.js

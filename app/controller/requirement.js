@@ -8,7 +8,7 @@ class RequirementController extends Controller {
   //index = async (ctx) => {
   //  ctx.body = await ctx.model.Requirement.find({});  // you should use upper case to access mongoose model
   //}
-  //返回部门树，不是列表！
+  //返回部门树，不是列表！ 
   /*
   async getReqTree() {
     const ctx = this.ctx;
@@ -49,7 +49,7 @@ class RequirementController extends Controller {
     const ctx = this.ctx;
     if (ctx.isAuthenticated()) {
       try{
-        console.log('___QUERY:' + JSON.stringify(ctx.query));
+        console.log('___QUERY_REQ:' + JSON.stringify(ctx.query));
         var where = {};
         //where因koa\egg的ctx.query不能解析嵌套对象，只能是按业务逐表定制
         if (ctx.query.selectedDept) {
@@ -67,7 +67,11 @@ class RequirementController extends Controller {
         }
         let pageSize = parseInt(ctx.query.pageSize) || 10;
         let current = parseInt(ctx.query.currentPage) || 1;
-        let sorter = ctx.query.sorter || '-updatedAt';
+        // let sorter = ctx.query.sorter || {updatedAt: -1};
+        var sorterField = ctx.query.sorter || '-updatedAt';
+        var s = sorterField[0] === '-' ? '{"' + sorterField.slice(1) + '": -1}' : '{"' + sorterField + '": 1}'
+        var sorter = JSON.parse(s); //注意上面s的拼接方式
+        // console.log('sorter:' + s);
         //if (ctx.query.pageSize) {
         //  pageSize = ctx.query.pageSize * 1;
         //}
@@ -79,16 +83,34 @@ class RequirementController extends Controller {
         //var product = await ProductCol.find({_id: id}) // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise
         const count = await ctx.model.Requirement.find(where).count();
         //从数据库中找出Requirement
-        const Requirements = await ctx.model.Requirement.find(where)
-              .sort(sorter)
-              .skip((current-1) * pageSize)
-              .limit(pageSize)
-              .populate( {
-                path: 'demanderId',
-                // match: { age: { $gte: 21 }},
-                select: 'username -_id',
-                // options: { limit: 5 },
-              });
+        // const Requirements = await ctx.model.Requirement.find(where)
+              // .sort(sorter)
+              // .skip((current-1) * pageSize)
+              // .limit(pageSize)
+              // .populate( [
+              //   { path: 'demanderId', select: 'username -_id' },        // match: { age: { $gte: 21 }}, options: { limit: 5 },                  
+              //   { path: 'deptIds', select: 'username -_id' },        // match: { age: { $gte: 21 }}, options: { limit: 5 },                  
+              //   { path: 'tags', select: 'username -_id' },        // match: { age: { $gte: 21 }}, options: { limit: 5 },                  
+              // ]);
+
+        const Requirements = await ctx.model.Requirement.aggregate([
+                { $match : where },
+                { $sort : sorter },
+                { $skip : (current-1) * pageSize },
+                { $limit : pageSize },
+                // { $lookup: {from: "Party", localField:"tags", foreignField: "_id", as: "tagNames"} },
+                { $graphLookup: { //多级查找
+                  from: "parties",
+                  startWith: "$tags",
+                  connectFromField: "tags",
+                  connectToField: "_id",
+                  maxDepth: 0,
+                  depthField: "numConnections",
+                  as: "tagRecords", // 每个tag按_id都展开为一个record。由前端找到其中的username。
+                  },
+                },
+                // { $project : { tagNames : "$tagRecords.username" } }, //字段筛选并改名
+              ]);
         //console.log(Requirements);
         const result = {
           list: Requirements,
