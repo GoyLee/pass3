@@ -13,19 +13,21 @@ module.exports = app => {
       password,
     };
     //debug('%s %s get user: %j', req.method, req.url, user);
+    // console.log('___LOGIN_POST1: ' + JSON.stringify(user));
     app.passport.doVerify(req, user, done);
     //return done(null, user);
 }));
 
 // 验证用户信息
 app.passport.verify(async (ctx, user) => {
-    console.log('POST: ' + user);
+    console.log('___LOGIN_POST2: ' + JSON.stringify(user));
     // 检查用户
     //assert(user.provider, 'user.provider should exists');
     //assert(user.id, 'user.id should exists');
     //ctx.login(user);
     ctx.session.type = ctx.request.body.type;
-    const existsUser = await ctx.model.Party.findOne({ username: user.username, password: user.password }); //从数据库中找出user
+    //使用"工号"~code来验证，二不是username
+    const existsUser = await ctx.model.Party.findOne({ code: user.username, password: user.password }); //从数据库中找出user
     if (existsUser) {
         //console.log('get path: ' + ctx.path)
         //指定 GET 成功登录信息ctx.body的地址

@@ -11,7 +11,7 @@ class HomeController extends Controller {
 
   async login() {
     const ctx = this.ctx;
-    console.log('Current session: ' + JSON.stringify(ctx.session));
+    console.log('__LOGIN_session: ' + JSON.stringify(ctx.session));
     //console.log('Current user: ' + JSON.stringify(ctx.user));
     if (ctx.session.login === 1) { //success
       ctx.body = {
@@ -51,8 +51,9 @@ class HomeController extends Controller {
 
   async logout() {
     const ctx = this.ctx;
-
+    ctx.session.login = 0;
     ctx.logout();
+    console.log('___LOGOUT_session: ' + JSON.stringify(ctx.session));
     ctx.redirect(ctx.get('referer') || '/home');
   }
 
@@ -66,7 +67,7 @@ class HomeController extends Controller {
         _id: ctx.user._id,
         pid: ctx.user.pid,
         avatar: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
-        userid: '00000001',
+        userid: ctx.user.code,
         notifyCount: 18,
       }
     } else {
