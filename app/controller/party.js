@@ -338,20 +338,33 @@ class PartyController extends Controller {
       return result;
   }
 
-  getExcel() {
+  async getExcel() {
     const ctx = this.ctx;
     if (ctx.isAuthenticated()) { //) {
       try{
         const _headers = [
-          {caption:'用户状态',type:'string'},
-          {caption:'部门',type:'string'},
-          {caption:'姓名',type:'string'},
-          {caption:'邮箱',type:'string'},
-          {caption:'有效期',type:'string'},
-          {caption:'身份',type:'string'}];
-        const rows = 
-          [['未激活','信息部','testname','123@qq.com','2019-11-09','管理员'],
-          ['未激活','信息部','testname2','12345@qq.com','2019-11-09','普通成员']];
+          {caption: 'code', type: String }, //required: true, , unique: true //工号
+          {caption: 'username', type: String },
+          {caption: 'email', type: String },
+          {caption: 'mobile', type: String },
+          {caption: 'type', type: String }, //部门，项目，员工，小组
+          {caption: 'status', type: String }, //状态：正常，兼职，离职，停职
+          {caption: 'updatedAt', type:Date },
+        ];
+        const records = await ctx.model.Party.aggregate( [
+          // { $match : { type: '标签' } }, //记录筛选
+          // { $unwind : { path:"$tags", preserveNullAndEmptyArrays: true }}, //标签展开
+          { $project : { _id:0, code:1, username:1, email:1, mobile:1, type:1, status:1, updatedAt:1 } }, //字段筛选并改名
+          { $sort : {updatedAt: -1} },
+        ] );
+        // var rows = [];
+        // var oneRow = [];
+        console.log('___GET_EXCEL1:' + JSON.stringify(records));
+        var rows = records.map( (obj) => Object.keys(obj).map(key => obj[key]));
+        console.log('___GET_EXCEL2:' + JSON.stringify(rows));
+        // const rows = 
+        //   [['未激活','信息部','testname','123@qq.com','2019-11-09','管理员'],
+        //   ['未激活','信息部','testname2','12345@qq.com','2019-11-09','普通成员']];
         //自己构造_headers和rows,导出excel
         var result = this.exportExcel(_headers,rows);
         ctx.response.set('Content-Type', 'application/vnd.openxmlformats'); ///'application/octet-stream'); 
