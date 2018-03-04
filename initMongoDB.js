@@ -5,9 +5,8 @@
 
 conn = new Mongo();
 db = conn.getDB("test");
-db.createCollection('parties');
-db.createCollection('parties');
-db.parties.insertOne( { username: 'admin', password:'888888' });
+// db.createCollection('parties');
+db.parties.insertOne( { code: 'admin', username: 'admin', password:'888888' });
 // db.createCollection('users');
 // db.users.insertOne( { username: 'admin', password:'888888', createdAt: Date.now() });
 // db.users.insertOne( { username: 'user', password:'123456', createdAt: Date.now() });

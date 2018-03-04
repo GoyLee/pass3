@@ -8,6 +8,7 @@
     "egg-passport-github": "^1.0.0",
     "egg-passport-twitter": "^1.0.0",
     "egg-passport-weibo": "^1.0.0",
+    "excel-export": "^0.5.1",
     "passport-local": "^1.0.0"
   },
   "devDependencies": {

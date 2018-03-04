@@ -21,6 +21,7 @@ module.exports = app => {
   app.router.get('/currentUser', controller.home.currentuser);
 
   //对party的请求
+  app.router.get('/partyexcel', controller.party.getExcel);
   app.router.get('/userlist', controller.party.getUserList);
   app.router.get('/userdept', controller.party.getUserDept);
   app.router.get('/depttree', controller.party.getDeptTree);

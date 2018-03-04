@@ -2,6 +2,7 @@
 const toTreeData = require('../public/utils');
 const getUrlParams = require('../public/getParams')
 const Controller = require('egg').Controller;
+const nodeExcel = require('excel-export');
 
 class PartyController extends Controller {
   // app/controller/party.js
@@ -307,6 +308,79 @@ class PartyController extends Controller {
       //ctx.status = 401;
     };
   };
+
+  /**
+   * 导出excel
+   * @param _headers example  [
+   {caption:'用户状态',type:'string'},
+   {caption:'部门',type:'string'},
+   {caption:'姓名',type:'string'},
+   {caption:'邮箱',type:'string'},
+   {caption:'有效期',type:'string'},
+   {caption:'身份',type:'string'}];
+   * @param rows example 
+   [['未激活','信息部','testname','123@qq.com','2019-11-09','管理员'],
+   ['未激活','信息部','testname2','12345@qq.com','2019-11-09','普通成员']]
+   */
+  exportExcel(_headers,rows){
+      var conf ={};
+      // conf.stylesXmlFile = "styles.xml";
+      conf.name = "mysheet";
+      conf.cols = [];
+      for(var i = 0; i < _headers.length; i++){
+          var col = {};
+          col.caption = _headers[i].caption;
+          col.type = _headers[i].type;
+          conf.cols.push(col);
+      }
+      conf.rows = rows;
+      var result = nodeExcel.execute(conf);
+      return result;
+  }
+
+  getExcel() {
+    const ctx = this.ctx;
+    if (ctx.isAuthenticated()) { //) {
+      try{
+        const _headers = [
+          {caption:'用户状态',type:'string'},
+          {caption:'部门',type:'string'},
+          {caption:'姓名',type:'string'},
+          {caption:'邮箱',type:'string'},
+          {caption:'有效期',type:'string'},
+          {caption:'身份',type:'string'}];
+        const rows = 
+          [['未激活','信息部','testname','123@qq.com','2019-11-09','管理员'],
+          ['未激活','信息部','testname2','12345@qq.com','2019-11-09','普通成员']];
+        //自己构造_headers和rows,导出excel
+        var result = this.exportExcel(_headers,rows);
+        ctx.response.set('Content-Type', 'application/vnd.openxmlformats'); ///'application/octet-stream'); 
+        ctx.response.set("Content-Disposition", "attachment; filename=" + "test.xlsx");
+        ctx.type = 'xlsx';
+        const body = new Buffer(result, 'binary'); // 关键一句
+        ctx.length = Buffer.byteLength(body);
+        ctx.body = body;
+       
+        // ctx.response.set('Content-Type', 'text/plain;charset=utf8');///'application/octet-stream'); 
+        // var result = 'Data found';
+        // const body = new Buffer(result, 'utf8'); // 关键一句
+        // ctx.body = body;
+        ctx.status = 200;
+        console.log('___GETEXCEL:' + JSON.stringify(ctx.body));
+      } catch (e) {
+        console.log(`###error ${e}`)
+        ctx.body = 'Data not found -myy';
+        ctx.status = 500;
+      }
+    } else {
+      ctx.response.status = 401; //'用户没有权限（令牌、用户名、密码错误）。会导致antPro客户端重新登录'
+      ctx.body = '404 not found-myy';
+      //ctx.status = 401;
+    };
+    return;
+  }
+  
+
 };
 
 module.exports = PartyController;

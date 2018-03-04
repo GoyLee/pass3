@@ -1178,6 +1178,12 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
+collections@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/collections/-/collections-3.0.0.tgz#27e3894df1b24cedfc55a1bbb0c0da12f68bab31"
+  dependencies:
+    weak-map "~1.0.x"
+
 color-convert@^1.9.0:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.1.tgz#c1261107aeb2f294ebffec9ed9ecad529a6097ed"
@@ -1961,6 +1967,13 @@ event-emitter@~0.3.5:
     d "1"
     es5-ext "~0.10.14"
 
+excel-export@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/excel-export/-/excel-export-0.5.1.tgz#6d08787f98b2ec931e4b3dcff18cc9083bbb8b77"
+  dependencies:
+    collections "^3.0.0"
+    node-zip "1.x"
+
 execa@^0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/execa/-/execa-0.7.0.tgz#944becd34cc41ee32a63a9faf27ad5a65fc59777"
@@ -2548,6 +2561,12 @@ jsonp-body@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/jsonp-body/-/jsonp-body-1.0.0.tgz#e610fb6fcea79cf0cc9f27baa7b56377d4b0bb36"
 
+jszip@2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/jszip/-/jszip-2.5.0.tgz#7444fd8551ddf3e5da7198fea0c91bc8308cc274"
+  dependencies:
+    pako "~0.2.5"
+
 kareem@1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/kareem/-/kareem-1.5.0.tgz#e3e4101d9dcfde299769daf4b4db64d895d17448"
@@ -2991,6 +3010,12 @@ node-homedir@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/node-homedir/-/node-homedir-1.1.0.tgz#0ada30050df8923631b011f961395b382eb8c5cf"
 
+node-zip@1.x:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/node-zip/-/node-zip-1.1.1.tgz#94d1ad674a3cd46a1588dd736f4a9a78c757eb62"
+  dependencies:
+    jszip "2.5.0"
+
 normalize-package-data@^2.3.2:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/normalize-package-data/-/normalize-package-data-2.4.0.tgz#12f95a307d58352075a04907b84ac8be98ac012f"
@@ -3178,6 +3203,10 @@ pac-resolver@^3.0.0:
     ip "^1.1.5"
     netmask "^1.0.6"
     thunkify "^2.1.2"
+
+pako@~0.2.5:
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/pako/-/pako-0.2.9.tgz#f3f7522f4ef782348da8161bad9ecfd51bf83a75"
 
 param-case@^2.1.0:
   version "2.1.1"
@@ -4169,6 +4198,10 @@ validate-npm-package-license@^3.0.1:
 vary@^1.0.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
+
+weak-map@~1.0.x:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/weak-map/-/weak-map-1.0.5.tgz#79691584d98607f5070bd3b70a40e6bb22e401eb"
 
 which-module@^1.0.0:
   version "1.0.0"
