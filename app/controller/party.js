@@ -3,6 +3,7 @@ const toTreeData = require('../public/utils');
 const getUrlParams = require('../public/getParams')
 const Controller = require('egg').Controller;
 const nodeExcel = require('excel-export');
+const moment = require('moment');
 
 class PartyController extends Controller {
   // app/controller/party.js
@@ -343,13 +344,13 @@ class PartyController extends Controller {
     if (ctx.isAuthenticated()) { //) {
       try{
         const _headers = [
-          {caption: 'code', type: String }, //required: true, , unique: true //工号
-          {caption: 'username', type: String },
-          {caption: 'email', type: String },
-          {caption: 'mobile', type: String },
-          {caption: 'type', type: String }, //部门，项目，员工，小组
-          {caption: 'status', type: String }, //状态：正常，兼职，离职，停职
-          {caption: 'updatedAt', type:Date },
+          {caption: 'code', type: String, width: 10 }, //required: true, , unique: true //工号
+          {caption: 'username', type: String, width: 20 },
+          {caption: 'email', type: String, width: 10 },
+          {caption: 'mobile', type: String, width: 10 },
+          {caption: 'type', type: String, width: 10 }, //部门，项目，员工，小组
+          {caption: 'status', type: String, width: 10 }, //状态：正常，兼职，离职，停职
+          {caption: 'updatedAt', type:Date, width: 20 },
         ];
         const records = await ctx.model.Party.aggregate( [
           // { $match : { type: '标签' } }, //记录筛选
@@ -360,7 +361,10 @@ class PartyController extends Controller {
         // var rows = [];
         // var oneRow = [];
         console.log('___GET_EXCEL1:' + JSON.stringify(records));
-        var rows = records.map( (obj) => Object.keys(obj).map(key => obj[key]));
+        // var rows = records.map( (obj) => Object.keys(obj).map(key => obj[key]));
+        var rows = records.map( (obj) => [
+            obj.code, obj.username, obj.email, obj.mobile, obj.type, obj.status, moment(obj.updatedAt).format('YYYY-MM-DD HH:mm:ss'),]);
+
         console.log('___GET_EXCEL2:' + JSON.stringify(rows));
         // const rows = 
         //   [['未激活','信息部','testname','123@qq.com','2019-11-09','管理员'],
