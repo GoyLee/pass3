@@ -16,3 +16,12 @@ name: 'ClusterClientNoResponseError'
 pid: 2576
 hostname: USER-GALVAKJA59
 
+2018-03-06 13:15:37,529 ERROR 2668 nodejs.ClusterClientNoResponseError: client no response in 2133153ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 2668
+hostname: USER-GALVAKJA59
+
