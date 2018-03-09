@@ -9,14 +9,18 @@ module.exports = app => {
       mobile: { type: String  },
       desc: { type: String  }, //描述
       position: { type: String  }, //职务
-      type: { type: String  }, //部门，项目，员工，小组
+      type: { type: String  }, //部门，标签，员工
       status: { type: String  }, //状态：正常，兼职，离职，停职
       authority: { type: String }, //界面功能权限，角色，admin, user, guest
-      provider: { type: String }, //认证方法
       createdAt: { type:Date, default: Date.now()}, //
       updatedAt: { type:Date, default: Date.now() },
       pid: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }], //上级所属部门，唯一
       tags: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }], //所属的项目、小组
+      //FOR IT products or services：
+      spec: { type: String  }, //规格
+      // quantity: {type: Number }, //库存数量
+      price: {type: Number }, //单价
+      provider: { type: String }, //供应商
       //树状的表中不要有children字段！会和前端的数据重复！
     });
     

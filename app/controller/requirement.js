@@ -1,6 +1,6 @@
 'use strict';
 const toTreeData = require('../public/utils');
-const getUrlParams = require('../public/getParams')
+// const getUrlParams = require('../public/getParams')
 const Controller = require('egg').Controller;
 
 class RequirementController extends Controller {
@@ -105,15 +105,16 @@ class RequirementController extends Controller {
                   connectFromField: "tags",
                   connectToField: "_id",
                   maxDepth: 0,
-                  depthField: "numConnections",
-                  as: "tagRecords", // 每个tag按_id都展开为一个record。由前端找到其中的username。
+                  depthField: "_depth",
+                  as: "tagRecords", // 每个tag按_id都展开为一个record。再由前端找到其中的username。
                   },
                 },
+                // { $count: "count"},
                 // { $project : { tagNames : "$tagRecords.username" } }, //字段筛选并改名
               ]);
         //console.log(Requirements);
         const result = {
-          list: Requirements,
+          list: Requirements, //Requirements[0].count,
           pagination: {
             total: count,
             pageSize: pageSize,

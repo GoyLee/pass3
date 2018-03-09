@@ -108,10 +108,23 @@
       "GET"
     ],
     "paramNames": [],
-    "path": "/userdept",
-    "regexp": "/^\\/userdept(?:\\/(?=$))?$/",
+    "path": "/oneparty",
+    "regexp": "/^\\/oneparty(?:\\/(?=$))?$/",
     "stack": [
-      "E:\\JS\\pass3\\app\\controller\\party.js#PartyController.getUserDept()"
+      "E:\\JS\\pass3\\app\\controller\\party.js#PartyController.getOneParty()"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/partyclass",
+    "regexp": "/^\\/partyclass(?:\\/(?=$))?$/",
+    "stack": [
+      "E:\\JS\\pass3\\app\\controller\\party.js#PartyController.getPartyClass()"
     ]
   },
   {
@@ -213,6 +226,18 @@
     "regexp": "/^\\/event(?:\\/(?=$))?$/",
     "stack": [
       "E:\\JS\\pass3\\app\\controller\\event.js#EventController.postEvent()"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/implement",
+    "regexp": "/^\\/implement(?:\\/(?=$))?$/",
+    "stack": [
+      "E:\\JS\\pass3\\app\\controller\\implement.js#ImplementController.postImplement()"
     ]
   }
 ]

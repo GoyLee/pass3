@@ -1,0 +1,54 @@
+2018-03-04 18:08:15,979 ERROR 8956 nodejs.ClusterClientNoResponseError: client no response in 16300789ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (D:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 8956
+hostname: ghm-pc
+
+2018-03-05 16:50:18,649 ERROR 2576 nodejs.ClusterClientNoResponseError: client no response in 13901183ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 2576
+hostname: USER-GALVAKJA59
+
+2018-03-06 13:15:37,529 ERROR 2668 nodejs.ClusterClientNoResponseError: client no response in 2133153ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 2668
+hostname: USER-GALVAKJA59
+
+2018-03-07 10:40:46,513 ERROR 6364 nodejs.ClusterClientNoResponseError: client no response in 320857ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 6364
+hostname: USER-GALVAKJA59
+
+2018-03-07 13:15:32,509 ERROR 6364 nodejs.ClusterClientNoResponseError: client no response in 945407ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 6364
+hostname: USER-GALVAKJA59
+
+2018-03-08 08:45:37,621 ERROR 6364 nodejs.ClusterClientNoResponseError: client no response in 55067563ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 6364
+hostname: USER-GALVAKJA59
+

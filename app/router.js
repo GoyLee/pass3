@@ -23,7 +23,8 @@ module.exports = app => {
   //对party的请求
   app.router.get('/partyexcel', controller.party.getExcel);
   app.router.get('/userlist', controller.party.getUserList);
-  app.router.get('/userdept', controller.party.getUserDept);
+  app.router.get('/oneparty', controller.party.getOneParty); // by '_id'
+  app.router.get('/partyclass', controller.party.getPartyClass); // a class of parties
   app.router.get('/depttree', controller.party.getDeptTree);
   app.router.get('/tagtree', controller.party.getTagTree);
   app.router.get('/party', controller.party.getParty);
@@ -37,6 +38,9 @@ module.exports = app => {
   //对event的请求
   app.router.get('/event', controller.event.getEvent);
   app.router.post('/event', controller.event.postEvent);
+  
+  //对implement的请求
+  app.router.post('/implement', controller.implement.postImplement);
   
   /*
   app.router.get('/logout', ctx => {

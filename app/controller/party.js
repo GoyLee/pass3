@@ -117,9 +117,9 @@ class PartyController extends Controller {
           //console.log('___QUERY:' + ctx.query.selectedDept);
           where = {...where, tags: ctx.query.selectedTag } //it works! Here, tags is [], ~tags 'has' selectedTag!, Mongo doesn't has 'has' operator!
         }
-        if (ctx.query.status) {
+        if (ctx.query.type) {
           //console.log('___QUERY:' + ctx.query.selectedDept);
-          where = {...where, status: ctx.query.status }
+          where = {...where, type: ctx.query.type }
         }
         if (ctx.query.id) {
           where = {...where, _id: ctx.query.id }
@@ -131,7 +131,11 @@ class PartyController extends Controller {
         }
         let pageSize = parseInt(ctx.query.pageSize) || 10;
         let current = parseInt(ctx.query.currentPage) || 1;
-        let sorter = ctx.query.sorter || '-updatedAt';
+        // let sorter = ctx.query.sorter || '-updatedAt';
+        var sorterField = ctx.query.sorter || '-updatedAt';
+        var s = sorterField[0] === '-' ? '{"' + sorterField.slice(1) + '": -1}' : '{"' + sorterField + '": 1}'
+        var sorter = JSON.parse(s); //注意上面s的拼接方式
+        
         //if (ctx.query.pageSize) {
         //  pageSize = ctx.query.pageSize * 1;
         //}
@@ -142,10 +146,29 @@ class PartyController extends Controller {
         //}
         //var product = await ProductCol.find({_id: id}) // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise
         const count = await ctx.model.Party.find(where).count();
-        const Party = await ctx.model.Party.find(where).sort(sorter).skip((current-1) * pageSize).limit(pageSize); //从数据库中找出Party
+        // const Party = await ctx.model.Party.find(where).sort(sorter).skip((current-1) * pageSize).limit(pageSize); //从数据库中找出Party
+        const Parties = await ctx.model.Party.aggregate([
+          { $match : where },
+          { $sort : sorter },
+          { $skip : (current-1) * pageSize },
+          { $limit : pageSize },
+          // { $lookup: {from: "Party", localField:"tags", foreignField: "_id", as: "tagNames"} },
+          { $graphLookup: { //多级查找
+              from: "parties",
+              startWith: "$tags",
+              connectFromField: "tags",
+              connectToField: "_id",
+              maxDepth: 0,
+              depthField: "_depth",
+              as: "tagRecords", // 每个tag按_id都展开为一个record。再由前端找到其中的username。
+            },
+          },
+          // { $count: "count"},
+          // { $project : { tagNames : "$tagRecords.username" } }, //字段筛选并改名
+        ]);
         //console.log(Party);
         const result = {
-          list: Party,
+          list: Parties,
           pagination: {
             total: count,
             pageSize: pageSize,
@@ -185,7 +208,7 @@ class PartyController extends Controller {
             break;
           case 'update':
             console.log('UPDATE:' + JSON.stringify(party));
-            party = {...party, updatedAt: Date.now()};
+            // party = {...party, updatedAt: Date.now()};
             const oldParty = await ctx.model.Party.findByIdAndUpdate(party._id, party); //function (err) { if (err) return console.error(err); }
             ctx.status = 201;
             break;
@@ -266,7 +289,7 @@ class PartyController extends Controller {
     };
   };
   //返回某_id的Party
-  async getUserDept() {
+  async getOneParty() {
     const ctx = this.ctx;
     if (ctx.isAuthenticated()) {
       try{
@@ -297,6 +320,37 @@ class PartyController extends Controller {
         ctx.body = result;
         ctx.status = 200;
         console.log('___GETUSERDEPT:' + JSON.stringify(ctx.body));
+      } catch (e) {
+        console.log(`###error ${e}`)
+        ctx.body = 'Data not found -myy';
+        ctx.status = 500;
+        //throw e
+      }
+    } else {
+      ctx.response.status = 401; //'用户没有权限（令牌、用户名、密码错误）。会导致antPro客户端重新登录'
+      ctx.body = '404 not found-myy';
+      //ctx.status = 401;
+    };
+  };
+  //返回某一类party的list，一般是根据某类标签，如：设备、软件
+  async getPartyClass() {
+    const ctx = this.ctx;
+    if (ctx.isAuthenticated()) {
+      try{
+        console.log('___QUERY_CLASS:' + JSON.stringify(ctx.query));
+        //var where = {type: '员工', status: '正常'};
+        var where;
+        if (ctx.query.class) {
+          where = {...where, username: ctx.query.class, type: '标签' }
+        }
+        //var product = await ProductCol.find({_id: id}) // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise
+        //const count = await ctx.model.Party.find(where).count();
+        var Party = await ctx.model.Party.find(where);//.select('_id username pid');//sort('username').
+        const result = await ctx.model.Party.find({tags: Party[0].id});//.select('_id username pid');//sort('username').
+        // const  result = Party[0]; //return only one  
+        ctx.body = result;
+        ctx.status = 200;
+        console.log('___GET_CLASS_'+ ctx.query.class + JSON.stringify(ctx.body));
       } catch (e) {
         console.log(`###error ${e}`)
         ctx.body = 'Data not found -myy';

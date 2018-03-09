@@ -1,0 +1,36 @@
+2018-03-08 11:33:38,521 ERROR 6364 nodejs.ClusterClientNoResponseError: client no response in 6717189ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 6364
+hostname: USER-GALVAKJA59
+
+2018-03-08 13:56:22,619 ERROR 6364 nodejs.ClusterClientNoResponseError: client no response in 6203327ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 6364
+hostname: USER-GALVAKJA59
+
+2018-03-08 17:16:20,564 ERROR 6364 nodejs.ClusterClientNoResponseError: client no response in 267993ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 6364
+hostname: USER-GALVAKJA59
+
+2018-03-09 03:00:14,631 ERROR 6364 nodejs.ClusterClientNoResponseError: client no response in 34793518ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 6364
+hostname: USER-GALVAKJA59
+
