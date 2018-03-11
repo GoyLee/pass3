@@ -14,7 +14,9 @@ module.exports = app => {
       // budget: {type: Number }, //预算额、总额，初始设定的
       amount: {type: Number }, //根据下级需求汇总上来的预算总额
       //fundsource: { type: String }, //资金来源：ARJ21，C919，CR929，课题，自筹
-      status: { type: String  }, //状态：提出，处理中（转项目），取消/拒绝，挂起，关闭
+      // status: { type: String  }, //状态：提出，处理中（转项目），取消/拒绝，挂起，关闭
+      type: { type: String  }, //计划，实际
+      date: { type:Date }, //日期，计划的或实际的
       user: { type: String  }, //{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }, //提出人
       createdAt: { type:Date, default: Date.now()}, //
       updatedAt: { type:Date, default: Date.now() },

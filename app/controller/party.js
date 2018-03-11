@@ -295,7 +295,7 @@ class PartyController extends Controller {
       try{
         console.log('___UerDeptQUERY:' + JSON.stringify(ctx.query));
         //var where = {type: '员工', status: '正常'};
-        var where;
+        var where={};
         if (ctx.query.id) {
           where = {...where, _id: ctx.query.id }
         }
@@ -339,14 +339,14 @@ class PartyController extends Controller {
       try{
         console.log('___QUERY_CLASS:' + JSON.stringify(ctx.query));
         //var where = {type: '员工', status: '正常'};
-        var where;
+        var where={};
         if (ctx.query.class) {
           where = {...where, username: ctx.query.class, type: '标签' }
         }
         //var product = await ProductCol.find({_id: id}) // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise
         //const count = await ctx.model.Party.find(where).count();
         var Party = await ctx.model.Party.find(where);//.select('_id username pid');//sort('username').
-        const result = await ctx.model.Party.find({tags: Party[0].id});//.select('_id username pid');//sort('username').
+        const result = await ctx.model.Party.find({tags: Party[0]._id});//.select('_id username pid');//sort('username').
         // const  result = Party[0]; //return only one  
         ctx.body = result;
         ctx.status = 200;

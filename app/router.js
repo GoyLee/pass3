@@ -40,6 +40,7 @@ module.exports = app => {
   app.router.post('/event', controller.event.postEvent);
   
   //对implement的请求
+  app.router.get('/oneimplement', controller.implement.getOneImpl); // by '_id'
   app.router.post('/implement', controller.implement.postImplement);
   
   /*
