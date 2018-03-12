@@ -36,7 +36,7 @@ module.exports = appInfo => {
   config.middleware = [];
 
   config.mongoose = {
-    url: 'mongodb://localhost:27017/test',
+    url: 'mongodb://10.50.1.250:27017/test',
     options: {}
   };
 
