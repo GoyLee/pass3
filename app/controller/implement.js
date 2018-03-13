@@ -102,44 +102,44 @@ class ImplementController extends Controller {
       try{
         var implement = ctx.request.body;
         //{method} = implement;
-        if (implement.method ==='changeReqState') {
-        // case 'cancelReq':
-        // case 'suspendReq':
-          const j = implement;
-          const event = {user: j.user, pid: j.pid, action: j.action,
-                            name: '[ ' + j.action + '需求 ]：' + j.reqname };
-          console.log('____ChangeReqState:' + JSON.stringify(event));
-          const newEvent = await new ctx.model.Event(event).save();
-          const oldRequirement = await ctx.model.Requirement.findByIdAndUpdate(j.pid, {state: j.state,  updatedAt: Date.now()});
-        } else {
-          switch (implement.method) {
-            case 'post':
-              //implement = {...implement, createdAt: Date.now() };
-              console.log('ADD:' + JSON.stringify(implement));
-              const newImplement = await new ctx.model.Implement(implement).save(); //function (err) { if (err) return console.error(err); }
-              var id = newImplement._id;
-              var type = '[新建]';
-              break;
-            case 'update':
-              console.log('UPDATE:' + JSON.stringify(implement));
-              // implement = {...implement, updatedAt: Date.now()};
-              const oldImplement = await ctx.model.Implement.findByIdAndUpdate(implement._id, implement); //function (err) { if (err) return console.error(err); }
-              var id = implement._id;
-              var type = '[更新]';
-              break;
-            default:
-              break;
-          };
-          //根据更新的结果，另保存一条“事件”：
-          const i = await ctx.model.Implement.findOne({_id: id}).populate('tags', 'username'); // populate tags' name
-          const event = {user: i.user, pid: i.pid, sid: i._id, action: i.type,
-                  name: type + i.budgetyear + '年, 标的：[' + i.name
-                  +']，规格：['+ i.spec +']，数量：'+ i.quantity + '，单价：' + i.price
-                  + '（万元）。标签：[' + i.tags.map((t) => t.username).join('/') + ']。完成日期：'+ moment(i.date).format('YYYY-MM-DD')};
-          const newEvent = await new ctx.model.Event(event).save();
-          // 更新对应需求的状态。注意这里仅提供了要更新的字段，其他字段自动保留！
-          const oldRequirement = await ctx.model.Requirement.findByIdAndUpdate(i.pid, {state: '处理中',  updatedAt: Date.now()}); 
+        // if (implement.method ==='changeReqState') {
+        // // case 'cancelReq':
+        // // case 'suspendReq':
+        //   const j = implement;
+        //   const event = {user: j.user, pid: j.pid, action: j.action,
+        //                     name: '[ ' + j.action + '需求 ]：' + j.reqname };
+        //   console.log('____ChangeReqState:' + JSON.stringify(event));
+        //   const newEvent = await new ctx.model.Event(event).save();
+        //   const oldRequirement = await ctx.model.Requirement.findByIdAndUpdate(j.pid, {state: j.state,  updatedAt: Date.now()});
+        // } else {
+        switch (implement.method) {
+          case 'post':
+            //implement = {...implement, createdAt: Date.now() };
+            console.log('ADD:' + JSON.stringify(implement));
+            const newImplement = await new ctx.model.Implement(implement).save(); //function (err) { if (err) return console.error(err); }
+            var id = newImplement._id;
+            var type = '[新建]';
+            break;
+          case 'update':
+            console.log('UPDATE:' + JSON.stringify(implement));
+            // implement = {...implement, updatedAt: Date.now()};
+            const oldImplement = await ctx.model.Implement.findByIdAndUpdate(implement._id, implement); //function (err) { if (err) return console.error(err); }
+            var id = implement._id;
+            var type = '[更新]';
+            break;
+          default:
+            break;
         };
+        //根据更新的结果，另保存一条“事件”：
+        const i = await ctx.model.Implement.findOne({_id: id}).populate('tags', 'username'); // populate tags' name
+        const event = {user: i.user, pid: i.pid, sid: i._id, action: i.type,
+                name: type + i.budgetyear + '年, 标的：[' + i.name
+                +']，规格：['+ i.spec +']，数量：'+ i.quantity + '，单价：' + i.price
+                + '（万元）。标签：[' + i.tags.map((t) => t.username).join('/') + ']。完成日期：'+ moment(i.date).format('YYYY-MM-DD')};
+        const newEvent = await new ctx.model.Event(event).save();
+        // 更新对应需求的状态。注意这里仅提供了要更新的字段，其他字段自动保留！
+        const oldRequirement = await ctx.model.Requirement.findByIdAndUpdate(i.pid, {state: '处理中',  updatedAt: Date.now()}); 
+        // };
         // console.log('___GETREQ:' + JSON.stringify(newEvent));
         const result = {status: 'ok'};
         ctx.status = 201;

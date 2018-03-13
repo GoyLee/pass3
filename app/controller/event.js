@@ -65,6 +65,9 @@ class EventController extends Controller {
             //event = {...event, createdAt: Date.now() };
             console.log('ADD:' + JSON.stringify(event));
             const newEvent = await new ctx.model.Event(event).save(); //function (err) { if (err) return console.error(err); }
+            if(event.action != '日常') {
+              const Req = await ctx.model.Requirement.findByIdAndUpdate(event.pid, {state: event.action,  updatedAt: Date.now()});
+            }
             ctx.status = 201;
             break;
           case 'update':

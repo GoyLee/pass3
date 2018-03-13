@@ -106,35 +106,44 @@ class PartyController extends Controller {
     //TODO: 提供异常和错误处理
     if (ctx.isAuthenticated()) {
       try{
-        console.log('___QUERY:' + JSON.stringify(ctx.query));
+        console.log('___QUERY_PARTY:' + JSON.stringify(ctx.query));
         var where = {};
         //where因koa\egg的ctx.query不能解析嵌套对象，只能是按业务逐表定制
         if (ctx.query.selectedDept) {
           //console.log('___QUERY:' + ctx.query.selectedDept);
-          where = {...where, pid: ctx.query.selectedDept } //it works! Here, pid is [], ~pid 'has' selectedDept!, Mongo doesn't has 'has' operator!
+          where = {...where, pid: ctx.query.selectedDept}; //it works! Here, pid is [], ~pid 'has' selectedDept!, Mongo doesn't has 'has' operator!
+          // where = {...where, "pid": {$elemMatch:{$eq: ctx.query.selectedDept}} }; //it works! Here, pid is [], ~pid 'has' selectedDept!, Mongo doesn't has 'has' operator!
+          // where = {...where, pid: {$elemMatch:{$eq: ctx.query.selectedDept}} }; //it works! Here, pid is [], ~pid 'has' selectedDept!, Mongo doesn't has 'has' operator!
+          // where = {...where, pid: {$in: [ctx.query.selectedDept, '$pid']} } //it works! Here, pid is [], ~pid 'has' selectedDept!, Mongo doesn't has 'has' operator!
         }
         if (ctx.query.selectedTag) {
           //console.log('___QUERY:' + ctx.query.selectedDept);
-          where = {...where, tags: ctx.query.selectedTag } //it works! Here, tags is [], ~tags 'has' selectedTag!, Mongo doesn't has 'has' operator!
+          where = {...where, tags: ctx.query.selectedTag }; //it works! Here, tags is [], ~tags 'has' selectedTag!, Mongo doesn't has 'has' operator!
         }
         if (ctx.query.type) {
           //console.log('___QUERY:' + ctx.query.selectedDept);
-          where = {...where, type: ctx.query.type }
+          where = {...where, type: ctx.query.type };
+        }
+        if (ctx.query.status) {
+          const s = ctx.query.status.split(',');
+          const q = s.length > 1 ? {$in: s} : s[0]; 
+          // console.log('___QUERY:' + JSON.stringify(q));
+          where = {...where, status: q };
         }
         if (ctx.query.id) {
-          where = {...where, _id: ctx.query.id }
+          where = {...where, _id: ctx.query.id };
         }
         if (ctx.query.username) {
           //console.log('___QUERY:' + ctx.query.selectedDept);
           const reg = new RegExp(ctx.query.username, 'i'); //模糊查询
-          where = {...where, username: {$regex : reg}}
+          where = {...where, username: {$regex : reg}};
         }
         let pageSize = parseInt(ctx.query.pageSize) || 10;
         let current = parseInt(ctx.query.currentPage) || 1;
         // let sorter = ctx.query.sorter || '-updatedAt';
         var sorterField = ctx.query.sorter || '-updatedAt';
-        var s = sorterField[0] === '-' ? '{"' + sorterField.slice(1) + '": -1}' : '{"' + sorterField + '": 1}'
-        var sorter = JSON.parse(s); //注意上面s的拼接方式
+        // var s = sorterField[0] === '-' ? '{"' + sorterField.slice(1) + '": -1}' : '{"' + sorterField + '": 1}'
+        // var sorter = JSON.parse(s); //注意上面s的拼接方式
         
         //if (ctx.query.pageSize) {
         //  pageSize = ctx.query.pageSize * 1;
@@ -146,26 +155,28 @@ class PartyController extends Controller {
         //}
         //var product = await ProductCol.find({_id: id}) // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise
         const count = await ctx.model.Party.find(where).count();
-        // const Party = await ctx.model.Party.find(where).sort(sorter).skip((current-1) * pageSize).limit(pageSize); //从数据库中找出Party
-        const Parties = await ctx.model.Party.aggregate([
-          { $match : where },
-          { $sort : sorter },
-          { $skip : (current-1) * pageSize },
-          { $limit : pageSize },
-          // { $lookup: {from: "Party", localField:"tags", foreignField: "_id", as: "tagNames"} },
-          { $graphLookup: { //多级查找
-              from: "parties",
-              startWith: "$tags",
-              connectFromField: "tags",
-              connectToField: "_id",
-              maxDepth: 0,
-              depthField: "_depth",
-              as: "tagRecords", // 每个tag按_id都展开为一个record。再由前端找到其中的username。
-            },
-          },
-          // { $count: "count"},
-          // { $project : { tagNames : "$tagRecords.username" } }, //字段筛选并改名
-        ]);
+        // const count = 10;
+        const Parties = await ctx.model.Party.find(where).sort(sorterField)
+              .skip((current-1) * pageSize).limit(pageSize).populate('tags', 'username'); //从数据库中找出Party
+        // const Parties = await ctx.model.Party.aggregate([
+        //   { $match : where },
+        //   { $sort : sorter },
+        //   { $skip : (current-1) * pageSize },
+        //   { $limit : pageSize },
+        //   // { $lookup: {from: "Party", localField:"tags", foreignField: "_id", as: "tagNames"} },
+        //   { $graphLookup: { //多级查找
+        //       from: "parties",
+        //       startWith: "$tags",
+        //       connectFromField: "tags",
+        //       connectToField: "_id",
+        //       maxDepth: 0,
+        //       depthField: "_depth",
+        //       as: "tagRecords", // 每个tag按_id都展开为一个record。再由前端找到其中的username。
+        //     },
+        //   },
+        //   // { $count: "count"},
+        //   // { $project : { tagNames : "$tagRecords.username" } }, //字段筛选并改名
+        // ]);
         //console.log(Party);
         const result = {
           list: Parties,
@@ -260,20 +271,22 @@ class PartyController extends Controller {
     const ctx = this.ctx;
     if (ctx.isAuthenticated()) {
       try{
-        console.log('___QUERY:' + JSON.stringify(ctx.query));
+        // console.log('___QUERY_UserList:' + JSON.stringify(ctx.query));
         var where = {type: '员工', status: '正常'};
-        if (ctx.query.username) {
-          //console.log('___QUERY:' + ctx.query.selectedDept);
-          const reg = new RegExp(ctx.query.username, 'i'); //模糊查询
-          where = {...where, username: {$regex : reg}}
-        }
+        // if (ctx.query.username) {
+        //   //console.log('___QUERY:' + ctx.query.selectedDept);
+        //   const reg = new RegExp(ctx.query.username, 'i'); //模糊查询
+        //   where = {...where, username: {$regex : reg}};
+        // };
         //var product = await ProductCol.find({_id: id}) // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise
         //const count = await ctx.model.Party.find(where).count();
-        var Party = await ctx.model.Party.find(where).sort('username').select('_id username pid').limit(5);
-                      //.populate({path: 'pid', select: 'username'}); //.aggregate({$project:{myid:"$_id"}})
+        var Parties = await ctx.model.Party.find(where).sort('username')
+                        .select('_id username pid')
+                        .populate('pid', 'username'); //.aggregate({$project:{myid:"$_id"}})
+                        //.limit(5);
         //console.log(Party);
-        const result = Party;  
-        ctx.body = result;
+        // const result = Parties;  
+        ctx.body = Parties;
         ctx.status = 200;
         console.log('___GETUSERLIST:' + JSON.stringify(ctx.body));
       } catch (e) {
@@ -301,7 +314,7 @@ class PartyController extends Controller {
         }
         //var product = await ProductCol.find({_id: id}) // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise
         //const count = await ctx.model.Party.find(where).count();
-        var Party = await ctx.model.Party.find(where).select('_id username pid');//sort('username').
+        var Party = await ctx.model.Party.findOne(where).select('_id username pid');//sort('username').
                       //.populate({path: 'pid', select: 'username'}); //.aggregate({$project:{myid:"$_id"}})
         //console.log(Party);
         /*
@@ -316,7 +329,7 @@ class PartyController extends Controller {
         //必须先用Promise.all同步，再用await保证中断.
         var Party = await (Promise.all( Party.map( p => fun (p))));  
         */
-        const result = Party[0]; //return only one  
+        const result = Party; //return only one  
         ctx.body = result;
         ctx.status = 200;
         console.log('___GETUSERDEPT:' + JSON.stringify(ctx.body));
