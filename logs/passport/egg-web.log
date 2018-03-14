@@ -143,3 +143,19 @@
 2018-03-13 14:34:55,479 INFO 13168 [egg-mongoose] mongodb://localhost:27017/test connected successfully
 2018-03-13 14:34:55,481 INFO 13168 [egg-mongoose] start successfully and server status is ok
 2018-03-13 14:34:55,483 INFO 13168 [egg-watcher:app] watcher start success
+2018-03-13 16:46:09,026 INFO 12860 [egg:logger] init all loggers with options: {"dir":"E:\\JS\\pass3\\logs\\passport","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"passport-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2018-03-13 16:46:09,067 INFO 12860 [egg-schedule]: register schedule E:\JS\pass3\node_modules\egg-logrotator\app\schedule\clean_log.js
+2018-03-13 16:46:09,067 INFO 12860 [egg-schedule]: register schedule E:\JS\pass3\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2018-03-13 16:46:09,398 INFO 12860 [egg-mongoose] connecting mongodb://localhost:27017/test
+2018-03-13 16:46:09,485 INFO 12860 [egg-static] starting static serve /public/ -> E:\JS\pass3\app\public
+2018-03-13 16:46:09,488 INFO 12860 [egg-security] use methodnoallow middleware
+2018-03-13 16:46:09,488 INFO 12860 [egg-security] use noopen middleware
+2018-03-13 16:46:09,489 INFO 12860 [egg-security] use nosniff middleware
+2018-03-13 16:46:09,489 INFO 12860 [egg-security] use xssProtection middleware
+2018-03-13 16:46:09,490 INFO 12860 [egg-security] use xframe middleware
+2018-03-13 16:46:09,490 INFO 12860 [egg-security] use dta middleware
+2018-03-13 16:46:09,490 INFO 12860 [egg-security] compose 6 middlewares into one security middleware
+2018-03-13 16:46:09,567 INFO 12860 [egg-mongoose] starting...
+2018-03-13 16:46:09,609 INFO 12860 [egg-mongoose] mongodb://localhost:27017/test connected successfully
+2018-03-13 16:46:09,610 INFO 12860 [egg-mongoose] start successfully and server status is ok
+2018-03-13 16:46:09,613 INFO 12860 [egg-watcher:app] watcher start success

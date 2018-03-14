@@ -8,7 +8,7 @@ conn = new Mongo();
 // conn = new Mongo("10.50.1.250");
 db = conn.getDB("test");
 db.createCollection('parties');
-db.parties.insertOne( { code: 'admin', username: 'admin', password:'888888' });
+db.parties.insertOne( { code: 'admin', username: 'admin', password:'888888', type:'员工', status:'正常' });
 // db.createCollection('users');
 // db.users.insertOne( { username: 'admin', password:'888888', createdAt: Date.now() });
 // db.users.insertOne( { username: 'user', password:'123456', createdAt: Date.now() });
