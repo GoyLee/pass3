@@ -56,9 +56,11 @@ class RequirementController extends Controller {
           //console.log('___QUERY:' + ctx.query.selectedDept);
           where = {...where, pid: ctx.query.selectedDept }
         }
-        if (ctx.query.status) {
-          //console.log('___QUERY:' + ctx.query.selectedDept);
-          where = {...where, status: ctx.query.status }
+        if (ctx.query.state) {
+          const s = ctx.query.state.split(',');
+          const q = s.length > 1 ? {$in: s} : s[0]; 
+          // console.log('___QUERY:' + JSON.stringify(q));
+          where = {...where, state: q };
         }
         if (ctx.query.reqname) {
           //console.log('___QUERY:' + ctx.query.selectedDept);

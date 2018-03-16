@@ -3,20 +3,21 @@ module.exports = app => {
     const mongoose = app.mongoose;
     var ImplementSchema = new mongoose.Schema({
       //code: { type: String  }, //required: true, , unique: true //工号
-      pid: { type: mongoose.Schema.Types.ObjectId, ref: 'Requirement' }, //上级需求，唯一
+      pid: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Requirement' }], //上级需求
       budgetyear: { type: String, required: true  }, // 年度，如：2018,2019...
       name: { type: String , required: false }, //名称
       // desc: { type: String , required: false }, //必要性、描述
-      tags: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }], //所属的项目、小组; 
+      tags: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }], //资金来源，资金分类; 
       spec: { type: String  }, //规格
       quantity: {type: Number }, //需求数量
       price: {type: Number }, //单价
       // budget: {type: Number }, //预算额、总额，初始设定的
       amount: {type: Number }, //根据下级需求汇总上来的预算总额
       //fundsource: { type: String }, //资金来源：ARJ21，C919，CR929，课题，自筹
-      // status: { type: String  }, //状态：提出，处理中（转项目），取消/拒绝，挂起，关闭
+      state: { type: String  }, //状态：提出，处理中（转项目），取消/拒绝，挂起，关闭
       type: { type: String  }, //计划，实际
       date: { type:Date }, //日期，计划的或实际的
+      actualdate: { type:Date }, //日期，计划的或实际的
       user: { type: String  }, //{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }, //提出人
       createdAt: { type:Date, default: Date.now()}, //
       updatedAt: { type:Date, default: Date.now() },

@@ -359,14 +359,15 @@ class PartyController extends Controller {
         //var product = await ProductCol.find({_id: id}) // find a doc; 这里必须用await来同步，因mongoose's CRUD函数返回的都是Promise
         //const count = await ctx.model.Party.find(where).count();
         var Party = await ctx.model.Party.find(where);//.select('_id username pid');//sort('username').
+        if (Party.length === 0) throw('还未创建标签：' + ctx.query.class );
         const result = await ctx.model.Party.find({tags: Party[0]._id});//.select('_id username pid');//sort('username').
-        // const  result = Party[0]; //return only one  
+      // const  result = Party[0]; //return only one  
         ctx.body = result;
         ctx.status = 200;
         console.log('___GET_CLASS_'+ ctx.query.class + JSON.stringify(ctx.body));
       } catch (e) {
-        console.log(`###error ${e}`)
-        ctx.body = 'Data not found -myy';
+        console.log(`### Error: ${e}`)
+        ctx.body = 'Server Error:' + e;
         ctx.status = 500;
         //throw e
       }

@@ -1,0 +1,20 @@
+2018-03-14 17:39:54,518 ERROR 11392 nodejs.ClusterClientNoResponseError: client no response in 3219651ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 11392
+hostname: USER-GALVAKJA59
+
+2018-03-15 03:00:15,334 ERROR 11288 [egg-mongoose] mongodb://10.50.1.250:27017/test disconnected
+2018-03-15 03:00:14,549 ERROR 11392 nodejs.ClusterClientNoResponseError: client no response in 33619566ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 11392
+hostname: USER-GALVAKJA59
+
+2018-03-15 03:00:15,305 ERROR 11392 [egg-mongoose] mongodb://10.50.1.250:27017/test disconnected

@@ -6,7 +6,7 @@ module.exports = app => {
       reqname: { type: String , required: true }, //名称
       desc: { type: String , required: false }, //必要性、描述
       // program: { type: String , required: false }, //IT项目群 type: mongoose.Schema.Types.ObjectId
-      tags: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }], //所属的项目、小组; 
+      tags: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }], //所属的项目群; 
       class: { type: String  }, //分类：项目群，项目，年度，阶段，tags?
       type: { type: String  }, //应用，设备，网络，服务
       state: { type: String  }, //状态：提出，处理中（转项目），取消/拒绝，挂起，关闭
@@ -22,7 +22,7 @@ module.exports = app => {
       //amount: {type: Number }, //根据下级需求汇总上来的预算总额
       //fundsource: { type: String }, //资金来源：ARJ21，C919，CR929，课题，自筹
       createdAt: { type:Date, default: Date.now()}, //
-      updatedAt: { type:Date, default: Date.now() },
+      updatedAt: { type:Date, default: Date.now()},
       // pid: { type: mongoose.Schema.Types.ObjectId, ref: 'Requirement' }, //上级需求，唯一
       //树状的表中不要有children字段！会和前端的数据重复！
     });

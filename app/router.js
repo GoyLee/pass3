@@ -41,6 +41,7 @@ module.exports = app => {
   
   //对implement的请求
   app.router.get('/oneimplement', controller.implement.getOneImpl); // by '_id'
+  app.router.get('/implement', controller.implement.getImplement);
   app.router.post('/implement', controller.implement.postImplement);
   
   /*

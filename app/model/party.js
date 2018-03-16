@@ -20,6 +20,7 @@ module.exports = app => {
       spec: { type: String  }, //规格
       // quantity: {type: Number }, //库存数量
       price: {type: Number }, //单价
+      spec: {type: String }, //规格
       provider: { type: String }, //供应商
       //树状的表中不要有children字段！会和前端的数据重复！
     });

@@ -3,8 +3,8 @@ module.exports = app => {
     const mongoose = app.mongoose;
     var EventSchema = new mongoose.Schema({
       name: { type: String , required: true }, //名称
-      pid: { type: mongoose.Schema.Types.ObjectId}, //上级对象，说明本事件是关于什么的，可以是需求、项目、任务、表单等，唯一
-      sid: { type: mongoose.Schema.Types.ObjectId}, //事件来源对象，说明本事件从什么对象的增删改而来的，如需求实现对象
+      pid: [{ type: mongoose.Schema.Types.ObjectId}], //上级对象，说明本事件是关于什么的，可以是需求、项目、任务、表单等，唯一
+      sid: { type: mongoose.Schema.Types.ObjectId}, //事件来源对象，说明本事件从对象的什么操作，如：增删改，而来的，如需求实现对象
       action: { type: String  }, //改变上级对象状态行动：计划、实现、关闭、挂起、恢复、取消/拒绝
       user: { type: String  }, //{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }, //提出人
       department: { type: String  }, //{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }, //提出人所属部门，指向party
