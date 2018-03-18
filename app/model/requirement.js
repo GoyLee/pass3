@@ -8,7 +8,7 @@ module.exports = app => {
       // program: { type: String , required: false }, //IT项目群 type: mongoose.Schema.Types.ObjectId
       tags: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }], //所属的项目群; 
       class: { type: String  }, //分类：项目群，项目，年度，阶段，tags?
-      type: { type: String  }, //应用，设备，网络，服务
+      type: { type: String  }, //应用，设备，软件，网络，服务
       state: { type: String  }, //状态：提出，处理中（转项目），取消/拒绝，挂起，关闭
       demander: { type: String  }, //{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }, //提出人，指向party
       demanderId: { type: mongoose.Schema.Types.ObjectId, ref: 'Party' }, //责任人，指向party
