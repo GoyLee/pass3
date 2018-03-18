@@ -23,6 +23,9 @@ class ImplementController extends Controller {
           // console.log('___QUERY:' + JSON.stringify(q));
           where = {...where, state: q };
         }
+        if (ctx.query.type) {
+          where = {...where, type: ctx.query.type };
+        }
         if (ctx.query.name) {
           //console.log('___QUERY:' + ctx.query.selectedDept);
           const reg = new RegExp(ctx.query.name, 'i');
@@ -30,14 +33,16 @@ class ImplementController extends Controller {
         }
         let pageSize = parseInt(ctx.query.pageSize) || 10;
         let current = parseInt(ctx.query.currentPage) || 1;
-        let sorter = ctx.query.sorter || '-createdAt';
+        let sorter = ctx.query.sorter || '-updatedAt';
         //if (ctx.query.pageSize) {
         //  pageSize = ctx.query.pageSize * 1;
         //}
         //const params = getUrlParams(ctx.request.href);
         // you should use upper case to access mongoose model
         const count = await ctx.model.Implement.find(where).count();
-        const Implements = await ctx.model.Implement.find(where).sort(sorter).populate('tags', 'username'); //.skip((current-1) * pageSize).limit(pageSize); //从数据库中找出Implement
+        const Implements = await ctx.model.Implement.find(where).sort(sorter)
+                  .populate('tags', 'username')
+                  .populate('pid'); //.skip((current-1) * pageSize).limit(pageSize); //从数据库中找出Implement
         //console.log(Implement);
         // const result = Implements; //M: 要返回列表，不要返回对象
         const result = {

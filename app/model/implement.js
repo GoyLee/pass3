@@ -7,7 +7,7 @@ module.exports = app => {
       budgetyear: { type: String, required: true  }, // 年度，如：2018,2019...
       name: { type: String , required: false }, //名称
       // desc: { type: String , required: false }, //必要性、描述
-      tags: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }], //资金来源，资金分类; 
+      tags: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }], //经费渠道，资金来源，资金分类; 
       spec: { type: String  }, //规格
       quantity: {type: Number }, //需求数量
       price: {type: Number }, //单价
@@ -18,7 +18,7 @@ module.exports = app => {
       type: { type: String  }, //计划，实际
       date: { type:Date }, //日期，计划的或实际的
       actualdate: { type:Date }, //日期，计划的或实际的
-      user: { type: String  }, //{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }, //提出人
+      user: { type: String  }, //{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }, //责任人
       createdAt: { type:Date, default: Date.now()}, //
       updatedAt: { type:Date, default: Date.now() },
       //树状的表中不要有children字段！会和前端的数据重复！

@@ -19,7 +19,7 @@ module.exports = app => {
       // quantity: {type: Number }, //需求数量
       // price: {type: Number }, //单价
       // budget: {type: Number }, //预算额、总额，初始设定的
-      //amount: {type: Number }, //根据下级需求汇总上来的预算总额
+      // amount: {type: Number }, //预算额
       //fundsource: { type: String }, //资金来源：ARJ21，C919，CR929，课题，自筹
       createdAt: { type:Date, default: Date.now()}, //
       updatedAt: { type:Date, default: Date.now()},

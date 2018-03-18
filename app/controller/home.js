@@ -68,7 +68,7 @@ class HomeController extends Controller {
         pid: ctx.user.pid,
         avatar: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
         userid: ctx.user.code,
-        authority: ctx.user.authority,
+        authority: ctx.user.authority || 'user',
         notifyCount: 18,
       }
     } else {

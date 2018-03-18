@@ -62,6 +62,13 @@ class RequirementController extends Controller {
           // console.log('___QUERY:' + JSON.stringify(q));
           where = {...where, state: q };
         }
+        if (ctx.query.type) {
+          where = {...where, type: ctx.query.type };
+        }
+        if (ctx.query.department) {
+          const reg = new RegExp(ctx.query.department, 'i');
+          where = {...where, department: {$regex : reg}}
+        }
         if (ctx.query.reqname) {
           //console.log('___QUERY:' + ctx.query.selectedDept);
           const reg = new RegExp(ctx.query.reqname, 'i');
