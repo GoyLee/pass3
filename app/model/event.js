@@ -7,6 +7,7 @@ module.exports = app => {
       sid: { type: mongoose.Schema.Types.ObjectId}, //事件来源对象，说明本事件从对象的什么操作，如：增删改，而来的，如需求实现对象
       action: { type: String  }, //改变上级对象状态行动：计划、实现、关闭、挂起、恢复、取消/拒绝
       user: { type: String  }, //{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }, //提出人
+      state: { type: String  }, //需求实现-计划项的状态
       department: { type: String  }, //{ type: mongoose.Schema.Types.ObjectId, ref: 'Party' }, //提出人所属部门，指向party
       //amount: {type: Number }, //根据下级需求汇总上来的预算总额
       createdAt: { type:Date, default: Date.now()}, //

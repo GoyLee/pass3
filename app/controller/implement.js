@@ -140,8 +140,8 @@ class ImplementController extends Controller {
             console.log('___UPDATE:' + JSON.stringify(implement));
             // implement = {...implement, updatedAt: Date.now()};
             const returnImpl = await ctx.model.Implement.findByIdAndUpdate(implement._id, implement); //function (err) { if (err) return console.error(err); }
-            const r = returnImpl;
-            newImpl = {...r,...implement};
+            newImpl = returnImpl;
+            // newImpl = {...r,...implement};
             // var id = implement._id;
             // var type = '[更新] ';
             break;
@@ -152,10 +152,10 @@ class ImplementController extends Controller {
         // const i = await ctx.model.Implement.findOne({_id: id}).populate('tags', 'username'); // populate tags' name
         const i = newImpl;
         // console.log('___Event_Add_from_Impl:' + JSON.stringify(i));
-        const implState = i.action === '计划' ? '，实现状态：[ ' + i.state + ' ]。' : '。';
-        const event = {user: i.user, pid: i.pid, sid: i._id, action: i.action,
+        // const implState ='实现状态：[ ' + i.state + ' ]。' : '。';
+        const event = {user: i.user, pid: i.pid, sid: i._id, action: implement.state,
                         name: i.budgetyear + '年, 标的：[' + i.name  +']，数量：'
-                                + i.quantity + '，金额：' + i.amount + '（万元）' + implState
+                                + i.quantity + '，金额：' + i.amount + '（万元）。' //，实现状态：[ ' + i.state + ' ]。'
                       };
                         // 标签：[' + i.tags.map((t) => t.username).join('/')  + ']。完成日期：'+ moment(i.date).format('YYYY-MM-DD')};
         const newEvent = await new ctx.model.Event(event).save();
