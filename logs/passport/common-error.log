@@ -1,13 +1,5 @@
-2018-03-18 12:34:47,582 ERROR 27656 nodejs.ClusterClientNoResponseError: client no response in 6012246ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (D:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
-    at ontimeout (timers.js:475:11)
-    at tryOnTimeout (timers.js:310:5)
-    at Timer.listOnTimeout (timers.js:270:5)
-name: 'ClusterClientNoResponseError'
-pid: 27656
-hostname: ghm-pc
-
-2018-03-19 15:17:34,554 ERROR 8048 nodejs.ClusterClientNoResponseError: client no response in 856299ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+2018-03-20 13:38:26,664 ERROR 3112 [egg-mongoose] mongodb://10.50.1.250:27017/test disconnected
+2018-03-20 13:38:26,594 ERROR 8048 nodejs.ClusterClientNoResponseError: client no response in 12871248ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
     at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\JS\pass3\node_modules\cluster-client\lib\leader.js:73:23)
     at ontimeout (timers.js:475:11)
     at tryOnTimeout (timers.js:310:5)
@@ -16,3 +8,4 @@ name: 'ClusterClientNoResponseError'
 pid: 8048
 hostname: USER-GALVAKJA59
 
+2018-03-20 13:38:26,675 ERROR 8048 [egg-mongoose] mongodb://10.50.1.250:27017/test disconnected
